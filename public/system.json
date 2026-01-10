@@ -58,6 +58,16 @@
       "lang": "fr",
       "name": "Français",
       "path": "lang/fr.json"
+    },
+    {
+      "lang": "pt",
+      "name": "Portuguese",
+      "path": "lang/pt.json"
+    },
+    {
+      "lang": "ptbr",
+      "name": "Brazilian Portuguese",
+      "path": "lang/ptbr.json"
     }
   ],
   "packs": [

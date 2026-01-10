@@ -76,3 +76,7 @@ See [game-icons-sources.txt](./game-icons-sources.txt) for the list of used icon
 - Los Brutos (Documentation and support)
 - Pretre (Rules insights and contributor)
 - VincentVK (Development)
+
+# Additional credits
+
+- Leandro Souza Soares (Portuguese translation)
