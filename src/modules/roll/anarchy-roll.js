@@ -58,7 +58,7 @@ export class AnarchyRoll {
   async rollPool() {
     this.subrolls.pool = new Roll(`${this.param.pool}d6cs>=${this.param.target}[${ROLL_THEME['dicePool']}]`)
     await this.subrolls.pool.evaluate({ async: true })
-    this.total = this.subrolls.pool.total;
+    this.total = this.subrolls.pool.total
   }
 
   async rollRerolls() {
@@ -66,7 +66,7 @@ export class AnarchyRoll {
     if (rerolls > 0) {
       this.subrolls.reroll = new Roll(`${rerolls}d6cs>=${this.param.target}[${ROLL_THEME['reroll']}]`);
       await this.subrolls.reroll.evaluate({ async: true });
-      this.total += this.subrolls.reroll.total;
+      this.total += this.subrolls.reroll.total
     }
   }
 
@@ -77,23 +77,22 @@ export class AnarchyRoll {
       await this.subrolls.removed.evaluate({ async: true })
       this.subrolls.rerollForced = new Roll(`${removed}d6cs>=${this.param.target}[${ROLL_THEME['rerollRemoved']}]`)
       await this.subrolls.rerollForced.evaluate({ async: true })
-      this.total -= removed;
-      this.total += this.subrolls.rerollForced.total;
+      this.total -= removed
+      this.total += this.subrolls.rerollForced.total
     }
   }
 
   async rollGlitchDice() {
     if (this.param.glitch > 0) {
       // using dgcs=0 allows to roll dice for glitch, but to have them count as 0 successes
-      this.subrolls.glitch = new Roll(`${this.param.glitch}d6cf=1[${ROLL_THEME['glitch']}]`);
+      this.subrolls.glitch = new Roll(`${this.param.glitch}d6cf=1cs>6[${ROLL_THEME['glitch']}]`)
       await this.subrolls.glitch.evaluate({ async: true })
       this.subrolls.glitch.dice[0].options.appearance = { colorset: GLITCH_COLORSET };
       this.glitch = this.subrolls.glitch.terms[0].results.filter(it => it.result == 1).length;
       this.glitchOutcome = this.glitch > 0
         ? 'glitch'
         : 'nothing';
-      this.totalGlitch += this.glitch;
-
+      this.totalGlitch += this.glitch
     }
   }
 
@@ -102,17 +101,17 @@ export class AnarchyRoll {
       this.subrolls.risk = new Roll(`${this.param.risk}drcs>=5[${ROLL_THEME['anarchyRisk']}]`);
       await this.subrolls.risk.evaluate({ async: true })
       this.subrolls.risk.dice[0].options.appearance = { colorset: RISK_COLORSET };
-      this.riskGlitch = this.subrolls.risk.terms[0].results.filter(it => it.result == 1).length;
-      this.riskProwess += this.subrolls.risk.terms[0].results.filter(it => it.result >= 5).length;
+      this.riskGlitch = this.subrolls.risk.terms[0].results.filter(it => it.result == 1).length
+      this.riskProwess += this.subrolls.risk.terms[0].results.filter(it => it.result >= 5).length
       if (this.subrolls.risk.total > 0) {
-        this.total++;
+        this.total++
       }
       this.riskOutcome = this.riskProwess > 0
         ? 'prowess'
         : this.riskGlitch > 0
           ? 'glitch'
           : 'nothing';
-      this.totalGlitch += this.riskGlitch;
+      this.totalGlitch += this.riskGlitch
     }
   }
 
@@ -125,12 +124,12 @@ export class AnarchyRoll {
     let index = 1;
     let rolls = [];
 
-    this._addRoll(rolls, this.subrolls.pool);
-    this._addRoll(rolls, this.subrolls.reroll);
-    this._addRoll(rolls, this.subrolls.removed);
-    this._addRoll(rolls, this.subrolls.rerollForced);
-    this._addRoll(rolls, this.subrolls.risk);
-    this._addRoll(rolls, this.subrolls.glitch);
+    this._addRoll(rolls, this.subrolls.pool)
+    this._addRoll(rolls, this.subrolls.reroll)
+    this._addRoll(rolls, this.subrolls.removed)
+    this._addRoll(rolls, this.subrolls.rerollForced)
+    this._addRoll(rolls, this.subrolls.risk)
+    this._addRoll(rolls, this.subrolls.glitch)
 
     rolls.forEach(r => r.dice[0].options.rollOrder = (index++));
 

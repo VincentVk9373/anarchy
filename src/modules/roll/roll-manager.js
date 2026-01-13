@@ -70,17 +70,17 @@ export class RollManager {
     await game.system.anarchy.combatManager.manageCombat(roll);
   }
 
-  async _displayRollInChat(hbsRoll) {
-    hbsRoll.options.classes = [game.system.anarchy.styles.selectCssClass()];
+  async _displayRollInChat(roll) {
+    roll.options.classes = [game.system.anarchy.styles.selectCssClass()];
 
     const flags = {}
-    ChatManager.prepareFlag(flags, MESSAGE_DATA, RollManager.deflateAnarchyRoll(hbsRoll))
-    ChatManager.prepareFlag(flags, CAN_USE_EDGE, hbsRoll.options.canUseEdge)
-    ChatManager.prepareFlag(flags, OWNING_ACTOR, ChatManager.messageActorRights(hbsRoll.actor))
+    ChatManager.prepareFlag(flags, MESSAGE_DATA, RollManager.deflateAnarchyRoll(roll))
+    ChatManager.prepareFlag(flags, CAN_USE_EDGE, roll.options.canUseEdge)
+    ChatManager.prepareFlag(flags, OWNING_ACTOR, ChatManager.messageActorRights(roll.actor))
 
-    const flavor = await renderTemplate(HBS_TEMPLATE_CHAT_ANARCHY_ROLL, hbsRoll);
-    const rollMessage = await hbsRoll.roll.toMessage({ flavor: flavor, flags: flags });
-    hbsRoll.chatMessageId = rollMessage.id;
+    const flavor = await renderTemplate(HBS_TEMPLATE_CHAT_ANARCHY_ROLL, roll);
+    const rollMessage = await roll.roll.toMessage({ flavor: flavor, flags: flags });
+    roll.chatMessageId = rollMessage.id;
   }
 
   static deflateAnarchyRoll(roll) {
