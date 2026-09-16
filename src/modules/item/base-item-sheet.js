@@ -2,7 +2,7 @@ import { ANARCHY } from "../config.js";
 import { TEMPLATE, TEMPLATES_PATH } from "../constants.js";
 import { Enums } from "../enums.js";
 
-export class BaseItemSheet extends ItemSheet {
+export class BaseItemSheet extends foundry.appv1.sheets.ItemSheet {
 
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
@@ -22,7 +22,7 @@ export class BaseItemSheet extends ItemSheet {
     return `${TEMPLATES_PATH}/item/${this.object.type}.hbs`;
   }
 
-  getData(options) {
+  async getData(options) {
     const actorAttributes = this.item.actor?.getAttributes(this.item);
 
     const usableAttribute = (this.item.actor
@@ -31,7 +31,7 @@ export class BaseItemSheet extends ItemSheet {
     const withKnowledge = this.item.type == TEMPLATE.itemType.skill
 
     let hbsData = foundry.utils.mergeObject(
-      super.getData(options),
+      await super.getData(options),
       {
         options: {
           isGM: game.user.isGM,

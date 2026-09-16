@@ -161,7 +161,7 @@ export class CharacterActor extends AnarchyBaseActor {
     if (wordsToSay) {
       ChatMessage.create({
         speaker: { alias: this.token?.name ?? this.name },
-        content: await renderTemplate(HBS_TEMPLATE_ACTOR_SAY_WORD,
+        content: await foundry.applications.handlebars.renderTemplate(HBS_TEMPLATE_ACTOR_SAY_WORD,
           {
             actor: this,
             wordsToSay: wordsToSay
@@ -278,7 +278,7 @@ export class CharacterActor extends AnarchyBaseActor {
       await rollDrain.evaluate({ async: true });
       await this.sufferDrain(rollDrain.total);
 
-      const flavor = await renderTemplate(HBS_TEMPLATE_ACTOR_DRAIN, {
+      const flavor = await foundry.applications.handlebars.renderTemplate(HBS_TEMPLATE_ACTOR_DRAIN, {
         ANARCHY: ANARCHY,
         actor: this,
         drain: rollDrain.total,

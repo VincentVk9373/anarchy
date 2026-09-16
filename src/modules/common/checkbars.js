@@ -345,7 +345,7 @@ export class Checkbars {
 
   static async setActorMarks(target, value, sourceActorId, item = undefined) {
     if (target.canReceiveMarks()) {
-      let marks = deepClone(target.getMatrixMarks())
+      let marks = foundry.utils.deepClone(target.getMatrixMarks())
       ErrorManager.checkOutOfRange(CHECKBARS.marks.resource, value, 0, Checkbars.max(target, 'marks'))
       const sourceActorMarks = Checkbars._findActorMarks(marks, sourceActorId)
       if (sourceActorMarks.marks == undefined) {

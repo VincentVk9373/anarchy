@@ -24,7 +24,7 @@ export class RollManager {
   }
 
   async onReady() {
-    await loadTemplates(Misc.distinct(HBS_CHAT_TEMPLATES));
+    await foundry.applications.handlebars.loadTemplates(Misc.distinct(HBS_CHAT_TEMPLATES));
   }
 
   async roll(roll) {
@@ -78,14 +78,14 @@ export class RollManager {
     ChatManager.prepareFlag(flags, CAN_USE_EDGE, roll.options.canUseEdge)
     ChatManager.prepareFlag(flags, OWNING_ACTOR, ChatManager.messageActorRights(roll.actor))
 
-    const flavor = await renderTemplate(HBS_TEMPLATE_CHAT_ANARCHY_ROLL, roll);
+    const flavor = await foundry.applications.handlebars.renderTemplate(HBS_TEMPLATE_CHAT_ANARCHY_ROLL, roll);
     const rollMessage = await roll.roll.toMessage({ flavor: flavor, flags: flags });
     roll.chatMessageId = rollMessage.id;
   }
 
   static deflateAnarchyRoll(roll) {
     if (roll) {
-      roll = deepClone(roll);
+      roll = foundry.utils.deepClone(roll);
       roll.actor = RollManager._reduceToId(roll.actor);
       roll.skill = RollManager._reduceToId(roll.skill);
       roll.skill = RollManager._reduceToId(roll.skill);
@@ -102,7 +102,7 @@ export class RollManager {
 
   static inflateAnarchyRoll(roll) {
     if (roll) {
-      roll = deepClone(roll);
+      roll = foundry.utils.deepClone(roll);
       roll.actor = RollManager._reloadActorFromId(roll.actor, roll.tokenId);
       roll.skill = RollManager._reloadItemFromId(roll.actor, roll.skill);
       roll.item = RollManager._reloadItemFromId(roll.actor, roll.item);

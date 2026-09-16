@@ -91,7 +91,7 @@ export class GMAnarchy {
   }
 
   async _renderBar() {
-    return await renderTemplate("systems/anarchy/templates/monitors/anarchy.hbs", {
+    return await foundry.applications.handlebars.renderTemplate("systems/anarchy/templates/monitors/anarchy.hbs", {
       code: 'plot',
       rowlength: 6,
       value: this.getAnarchy().value,

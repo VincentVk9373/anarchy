@@ -141,43 +141,43 @@ export class AnarchySystem {
   }
 
   loadActorSheets() {
-    Actors.unregisterSheet('core', ActorSheet);
-    Actors.registerSheet(SYSTEM_NAME, CharacterActorSheet, {
+    foundry.documents.collections.Actors.unregisterSheet('core', foundry.appv1.sheets.ActorSheet);
+    foundry.documents.collections.Actors.registerSheet(SYSTEM_NAME, CharacterActorSheet, {
       label: game.i18n.localize(ANARCHY.actor.characterSheet),
       makeDefault: false,
       types: ['character']
     });
-    Actors.registerSheet(SYSTEM_NAME, CharacterNPCSheet, {
+    foundry.documents.collections.Actors.registerSheet(SYSTEM_NAME, CharacterNPCSheet, {
       label: game.i18n.localize(ANARCHY.actor.characterNPCSheet),
       makeDefault: false,
       types: ['character']
     });
-    Actors.registerSheet(SYSTEM_NAME, CharacterTabbedSheet, {
+    foundry.documents.collections.Actors.registerSheet(SYSTEM_NAME, CharacterTabbedSheet, {
       label: game.i18n.localize(ANARCHY.actor.characterTabbedSheet),
       makeDefault: false,
       types: ['character']
     });
-    Actors.registerSheet(SYSTEM_NAME, CharacterEnhancedSheet, {
+    foundry.documents.collections.Actors.registerSheet(SYSTEM_NAME, CharacterEnhancedSheet, {
       label: game.i18n.localize(ANARCHY.actor.characterEnhancedSheet),
       makeDefault: true,
       types: ['character']
     });
-    Actors.registerSheet(SYSTEM_NAME, VehicleSheet, {
+    foundry.documents.collections.Actors.registerSheet(SYSTEM_NAME, VehicleSheet, {
       label: game.i18n.localize(ANARCHY.actor.vehicleSheet),
       makeDefault: true,
       types: ['vehicle']
     });
-    Actors.registerSheet(SYSTEM_NAME, DeviceSheet, {
+    foundry.documents.collections.Actors.registerSheet(SYSTEM_NAME, DeviceSheet, {
       label: game.i18n.localize(ANARCHY.actor.deviceSheet),
       makeDefault: true,
       types: ['device']
     });
-    Actors.registerSheet(SYSTEM_NAME, SpriteActorSheet, {
+    foundry.documents.collections.Actors.registerSheet(SYSTEM_NAME, SpriteActorSheet, {
       label: game.i18n.localize(ANARCHY.actor.spriteSheet),
       makeDefault: true,
       types: ['sprite']
     });
-    Actors.registerSheet(SYSTEM_NAME, ICSheet, {
+    foundry.documents.collections.Actors.registerSheet(SYSTEM_NAME, ICSheet, {
       label: game.i18n.localize(ANARCHY.actor.icSheet),
       makeDefault: true,
       types: ['ic']
@@ -185,15 +185,15 @@ export class AnarchySystem {
   }
 
   loadItemSheets() {
-    Items.unregisterSheet('core', ItemSheet);
-    Items.registerSheet(SYSTEM_NAME, ContactItemSheet, { types: ["contact"], makeDefault: true });
-    Items.registerSheet(SYSTEM_NAME, CyberdeckItemSheet, { types: ["cyberdeck"], makeDefault: true });
-    Items.registerSheet(SYSTEM_NAME, GearItemSheet, { types: ["gear"], makeDefault: true });
-    Items.registerSheet(SYSTEM_NAME, MetatypeItemSheet, { types: ["metatype"], makeDefault: true });
-    Items.registerSheet(SYSTEM_NAME, QualityItemSheet, { types: ["quality"], makeDefault: true });
-    Items.registerSheet(SYSTEM_NAME, ShadowampItemSheet, { types: ["shadowamp"], makeDefault: true });
-    Items.registerSheet(SYSTEM_NAME, SkillItemSheet, { types: ["skill"], makeDefault: true });
-    Items.registerSheet(SYSTEM_NAME, WeaponItemSheet, { types: ["weapon"], makeDefault: true });
+    foundry.documents.collections.Items.unregisterSheet('core', foundry.appv1.sheets.ItemSheet);
+    foundry.documents.collections.Items.registerSheet(SYSTEM_NAME, ContactItemSheet, { types: ["contact"], makeDefault: true });
+    foundry.documents.collections.Items.registerSheet(SYSTEM_NAME, CyberdeckItemSheet, { types: ["cyberdeck"], makeDefault: true });
+    foundry.documents.collections.Items.registerSheet(SYSTEM_NAME, GearItemSheet, { types: ["gear"], makeDefault: true });
+    foundry.documents.collections.Items.registerSheet(SYSTEM_NAME, MetatypeItemSheet, { types: ["metatype"], makeDefault: true });
+    foundry.documents.collections.Items.registerSheet(SYSTEM_NAME, QualityItemSheet, { types: ["quality"], makeDefault: true });
+    foundry.documents.collections.Items.registerSheet(SYSTEM_NAME, ShadowampItemSheet, { types: ["shadowamp"], makeDefault: true });
+    foundry.documents.collections.Items.registerSheet(SYSTEM_NAME, SkillItemSheet, { types: ["skill"], makeDefault: true });
+    foundry.documents.collections.Items.registerSheet(SYSTEM_NAME, WeaponItemSheet, { types: ["weapon"], makeDefault: true });
   }
 
 }

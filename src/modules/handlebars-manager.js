@@ -154,10 +154,17 @@ export class HandlebarsManager {
 
   async onReady() {
     this.registerBasicHelpers();
-    await loadTemplates(Misc.distinct(HBS_PARTIAL_TEMPLATES))
+    await foundry.applications.handlebars.loadTemplates(Misc.distinct(HBS_PARTIAL_TEMPLATES))
   }
 
   registerBasicHelpers() {
+    Handlebars.registerHelper('select', function (selected, options) {
+      const escapedValue = RegExp.escape(Handlebars.escapeExpression(selected));
+      const rgx = new RegExp(' value=[\"\']' + escapedValue + '[\"\']');
+      const html = options.fn(this);
+      return html.replace(rgx, "$& selected");
+    })
+
     Handlebars.registerHelper('concat', (...args) => Misc.join(args.slice(0, -1)));
     Handlebars.registerHelper('substring', (str, from, to) => str?.substring(from, to));
     Handlebars.registerHelper('toUpperCase', Grammar.toUpperCaseNoAccent);

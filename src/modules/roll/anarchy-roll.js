@@ -133,7 +133,7 @@ export class AnarchyRoll {
 
     rolls.forEach(r => r.dice[0].options.rollOrder = (index++));
 
-    return Roll.fromTerms([PoolTerm.fromRolls(rolls)]);
+    return Roll.fromTerms([foundry.dice.terms.PoolTerm.fromRolls(rolls)]);
   }
 
   _addRoll(rolls, roll) {

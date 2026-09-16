@@ -3,8 +3,8 @@ import { BaseItemSheet } from "./base-item-sheet.js";
 
 export class WeaponItemSheet extends BaseItemSheet {
 
-  getData(options) {
-    let hbsData = super.getData(options);
+  async getData(options) {
+    let hbsData = await super.getData(options);
     hbsData.ENUMS = foundry.utils.mergeObject({ defenses: AttributeActions.getDefenses(), }, hbsData.ENUMS);
     hbsData.hasDrain = this.item.hasDrain
     hbsData.hasConvergence = this.item.hasConvergence

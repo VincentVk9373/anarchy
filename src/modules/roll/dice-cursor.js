@@ -16,7 +16,7 @@ export class DiceCursor {
   }
 
   static async onReady() {
-    await loadTemplates([
+    await foundry.applications.handlebars.loadTemplates([
       'systems/anarchy/templates/roll/parts/dice-cursor.hbs',
     ]);
   }
@@ -52,7 +52,7 @@ export class DiceCursor {
   }
 
   static async diceCursor({ value, min, max, editable }) {
-    return await renderTemplate('systems/anarchy/templates/roll/parts/dice-cursor.hbs', {
+    return await foundry.applications.handlebars.renderTemplate('systems/anarchy/templates/roll/parts/dice-cursor.hbs', {
       value, min, max, editable
     })
   }

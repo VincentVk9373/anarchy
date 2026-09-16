@@ -21,7 +21,7 @@ const CHAT_MESSAGE_BUTTON_HANDLERS = [
 export class ChatManager {
 
   static async init() {
-    Hooks.on('renderChatMessage', async (app, html, msg) => await ChatManager.onRenderChatMessage(app, html, msg));
+    Hooks.on('renderChatMessageHTML', async (app, html, msg) => await ChatManager.onRenderChatMessageHTML(app, html, msg));
 
     RemoteCall.register(CHAT_MANAGER_REMOVE_FAMILY, {
       callback: data => this.removeFamily(data),
@@ -34,20 +34,22 @@ export class ChatManager {
     });
   }
 
-  static async onRenderChatMessage(app, html, msg) {
+  static async onRenderChatMessageHTML(app, html, msg) {
     const chatMessage = ChatManager.getChatMessageFromHtml(html);
     const showButtons = ChatManager.hasRight(chatMessage);
     CHAT_MESSAGE_BUTTON_HANDLERS.forEach(it => {
-      const jQueryButtonSelector = html.find(it.selector);
-      if (!it.controlVisibility || showButtons) {
-        jQueryButtonSelector.show();
-        jQueryButtonSelector.click(async event => await it.handler(ChatManager.getChatMessage(event), event))
-      }
-      else {
-        jQueryButtonSelector.hide();
-        jQueryButtonSelector.click(async event => { })
-      }
-    });
+      html.querySelectorAll(it.selector)
+        .forEach(button  => {
+          if (!it.controlVisibility || showButtons) {
+            button.style.display = 'block';
+            button.addEventListener('click', event => it.handler(ChatManager.getChatMessage(event), event))
+          }
+          else {
+            button.style.display = 'none';
+            button.addEventListener('click', event => { })
+          }
+        })
+    })
   }
 
   static async openActorSheet(chatMsg, event) {

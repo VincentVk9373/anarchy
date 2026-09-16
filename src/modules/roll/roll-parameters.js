@@ -412,8 +412,8 @@ export class RollParameters {
       .concat(Object.values(this.registeredParameters).map(p => p.options.hbsTemplateRoll))
       .concat(Object.values(this.registeredParameters).map(p => p.options.hbsTemplateChat))
       .filter(it => it != undefined));
-    await loadTemplates(Misc.distinct(templates));
-    await loadTemplates([`${TEMPLATES_PATH}/roll/parts/parameter-label.hbs`]);
+    await foundry.applications.handlebars.loadTemplates(Misc.distinct(templates));
+    await foundry.applications.handlebars.loadTemplates([`${TEMPLATES_PATH}/roll/parts/parameter-label.hbs`]);
   }
 
   _validate(parameter) {
@@ -438,7 +438,7 @@ export class RollParameters {
 
   async _optionalLoadTemplate(hbsTemplate) {
     if (hbsTemplate) {
-      await loadTemplates([hbsTemplate]);
+      await foundry.applications.handlebars.loadTemplates([hbsTemplate]);
     }
   }
 

@@ -2,8 +2,8 @@ import { BaseItemSheet } from "./base-item-sheet.js";
 
 export class ShadowampItemSheet extends BaseItemSheet {
 
-  getData(options) {
-    let hbsData = super.getData(options);
+  async getData(options) {
+    let hbsData = await super.getData(options);
     return hbsData;
   }
 

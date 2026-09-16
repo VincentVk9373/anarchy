@@ -12,7 +12,7 @@ export class SelectActor extends Dialog {
     let dialogOptions = { classes: ["select-actor"], width: 300, height: 300, 'z-index': 99999 };
     let dialogConfig = {
       title: title,
-      content: await renderTemplate(`${TEMPLATES_PATH}/dialog/select-actor.hbs`, {
+      content: await foundry.applications.handlebars.renderTemplate(`${TEMPLATES_PATH}/dialog/select-actor.hbs`, {
         actors: actors
       }),
       buttons: {

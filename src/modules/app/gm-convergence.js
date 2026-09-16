@@ -24,7 +24,7 @@ export class GMConvergence {
   }
 
   async onReady() {
-    await loadTemplates([
+    await foundry.applications.handlebars.loadTemplates([
       HBS_TEMPLATE_CONVERGENCE,
       HBS_TEMPLATE_CONVERGENCE_ACTORS
     ]);
@@ -121,7 +121,7 @@ export class GMConvergence {
         };
       })
     };
-    const html = await renderTemplate(HBS_TEMPLATE_CONVERGENCE_ACTORS, actorsConvergence);
+    const html = await foundry.applications.handlebars.renderTemplate(HBS_TEMPLATE_CONVERGENCE_ACTORS, actorsConvergence);
     return html;
   }
 

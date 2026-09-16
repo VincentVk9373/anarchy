@@ -35,7 +35,7 @@ export class GMManager extends Application {
         rollDice: game.i18n.localize("ANARCHY.chat_actions.rollDice.title"),
         isGM: game.user.isGM,
       };
-      const templateHTML = await renderTemplate(templatePath, templateData);
+      const templateHTML = await foundry.applications.handlebars.renderTemplate(templatePath, templateData);
       const template = $(templateHTML)
       $(html).find('form.chat-form').append(template[0]);
 
