@@ -1,4 +1,4 @@
-import type { PluginOption, UserConfig } from 'vite';
+import type { UserConfig } from 'vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 
 const config: UserConfig = {

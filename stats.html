@@ -8,9 +8,9 @@
   <title>Rollup Visualizer</title>
   <style>
 :root {
-  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    "Noto Color Emoji";
+  --font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --background-color: #2b2d42;
   --text-color: #edf2f4;
 }
@@ -149,9 +149,9 @@ main {
 var drawChart = (function (exports) {
   'use strict';
 
-  var n,l$1,u$2,i$1,r$1,o$1,e$1,f$2,c$1,s$1,a$1,h$1,p$1={},v$1=[],y$1=/acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i,d$1=Array.isArray;function w$1(n,l){for(var u in l)n[u]=l[u];return n}function _$1(n){n&&n.parentNode&&n.parentNode.removeChild(n);}function g(l,u,t){var i,r,o,e={};for(o in u)"key"==o?i=u[o]:"ref"==o?r=u[o]:e[o]=u[o];if(arguments.length>2&&(e.children=arguments.length>3?n.call(arguments,2):t),"function"==typeof l&&null!=l.defaultProps)for(o in l.defaultProps)void 0===e[o]&&(e[o]=l.defaultProps[o]);return m$1(l,e,i,r,null)}function m$1(n,t,i,r,o){var e={type:n,props:t,key:i,ref:r,__k:null,__:null,__b:0,__e:null,__c:null,constructor:void 0,__v:null==o?++u$2:o,__i:-1,__u:0};return null==o&&null!=l$1.vnode&&l$1.vnode(e),e}function k$1(n){return n.children}function x$1(n,l){this.props=n,this.context=l;}function C$1(n,l){if(null==l)return n.__?C$1(n.__,n.__i+1):null;for(var u;l<n.__k.length;l++)if(null!=(u=n.__k[l])&&null!=u.__e)return u.__e;return "function"==typeof n.type?C$1(n):null}function S(n){var l,u;if(null!=(n=n.__)&&null!=n.__c){for(n.__e=n.__c.base=null,l=0;l<n.__k.length;l++)if(null!=(u=n.__k[l])&&null!=u.__e){n.__e=n.__c.base=u.__e;break}return S(n)}}function M(n){(!n.__d&&(n.__d=!0)&&i$1.push(n)&&!P.__r++||r$1!==l$1.debounceRendering)&&((r$1=l$1.debounceRendering)||o$1)(P);}function P(){var n,u,t,r,o,f,c,s;for(i$1.sort(e$1);n=i$1.shift();)n.__d&&(u=i$1.length,r=void 0,f=(o=(t=n).__v).__e,c=[],s=[],t.__P&&((r=w$1({},o)).__v=o.__v+1,l$1.vnode&&l$1.vnode(r),j$1(t.__P,r,o,t.__n,t.__P.namespaceURI,32&o.__u?[f]:null,c,null==f?C$1(o):f,!!(32&o.__u),s),r.__v=o.__v,r.__.__k[r.__i]=r,z$1(c,r,s),r.__e!=f&&S(r)),i$1.length>u&&i$1.sort(e$1));P.__r=0;}function $(n,l,u,t,i,r,o,e,f,c,s){var a,h,y,d,w,_,g=t&&t.__k||v$1,m=l.length;for(f=I(u,l,g,f,m),a=0;a<m;a++)null!=(y=u.__k[a])&&(h=-1===y.__i?p$1:g[y.__i]||p$1,y.__i=a,_=j$1(n,y,h,i,r,o,e,f,c,s),d=y.__e,y.ref&&h.ref!=y.ref&&(h.ref&&V(h.ref,null,y),s.push(y.ref,y.__c||d,y)),null==w&&null!=d&&(w=d),4&y.__u||h.__k===y.__k?f=A$1(y,f,n):"function"==typeof y.type&&void 0!==_?f=_:d&&(f=d.nextSibling),y.__u&=-7);return u.__e=w,f}function I(n,l,u,t,i){var r,o,e,f,c,s=u.length,a=s,h=0;for(n.__k=new Array(i),r=0;r<i;r++)null!=(o=l[r])&&"boolean"!=typeof o&&"function"!=typeof o?(f=r+h,(o=n.__k[r]="string"==typeof o||"number"==typeof o||"bigint"==typeof o||o.constructor==String?m$1(null,o,null,null,null):d$1(o)?m$1(k$1,{children:o},null,null,null):void 0===o.constructor&&o.__b>0?m$1(o.type,o.props,o.key,o.ref?o.ref:null,o.__v):o).__=n,o.__b=n.__b+1,e=null,-1!==(c=o.__i=L(o,u,f,a))&&(a--,(e=u[c])&&(e.__u|=2)),null==e||null===e.__v?(-1==c&&h--,"function"!=typeof o.type&&(o.__u|=4)):c!=f&&(c==f-1?h--:c==f+1?h++:(c>f?h--:h++,o.__u|=4))):n.__k[r]=null;if(a)for(r=0;r<s;r++)null!=(e=u[r])&&0==(2&e.__u)&&(e.__e==t&&(t=C$1(e)),q$1(e,e));return t}function A$1(n,l,u){var t,i;if("function"==typeof n.type){for(t=n.__k,i=0;t&&i<t.length;i++)t[i]&&(t[i].__=n,l=A$1(t[i],l,u));return l}n.__e!=l&&(l&&n.type&&!u.contains(l)&&(l=C$1(n)),u.insertBefore(n.__e,l||null),l=n.__e);do{l=l&&l.nextSibling;}while(null!=l&&8==l.nodeType);return l}function L(n,l,u,t){var i,r,o=n.key,e=n.type,f=l[u];if(null===f||f&&o==f.key&&e===f.type&&0==(2&f.__u))return u;if(t>(null!=f&&0==(2&f.__u)?1:0))for(i=u-1,r=u+1;i>=0||r<l.length;){if(i>=0){if((f=l[i])&&0==(2&f.__u)&&o==f.key&&e===f.type)return i;i--;}if(r<l.length){if((f=l[r])&&0==(2&f.__u)&&o==f.key&&e===f.type)return r;r++;}}return -1}function T$1(n,l,u){"-"==l[0]?n.setProperty(l,null==u?"":u):n[l]=null==u?"":"number"!=typeof u||y$1.test(l)?u:u+"px";}function F(n,l,u,t,i){var r;n:if("style"==l)if("string"==typeof u)n.style.cssText=u;else {if("string"==typeof t&&(n.style.cssText=t=""),t)for(l in t)u&&l in u||T$1(n.style,l,"");if(u)for(l in u)t&&u[l]===t[l]||T$1(n.style,l,u[l]);}else if("o"==l[0]&&"n"==l[1])r=l!=(l=l.replace(f$2,"$1")),l=l.toLowerCase()in n||"onFocusOut"==l||"onFocusIn"==l?l.toLowerCase().slice(2):l.slice(2),n.l||(n.l={}),n.l[l+r]=u,u?t?u.u=t.u:(u.u=c$1,n.addEventListener(l,r?a$1:s$1,r)):n.removeEventListener(l,r?a$1:s$1,r);else {if("http://www.w3.org/2000/svg"==i)l=l.replace(/xlink(H|:h)/,"h").replace(/sName$/,"s");else if("width"!=l&&"height"!=l&&"href"!=l&&"list"!=l&&"form"!=l&&"tabIndex"!=l&&"download"!=l&&"rowSpan"!=l&&"colSpan"!=l&&"role"!=l&&"popover"!=l&&l in n)try{n[l]=null==u?"":u;break n}catch(n){}"function"==typeof u||(null==u||!1===u&&"-"!=l[4]?n.removeAttribute(l):n.setAttribute(l,"popover"==l&&1==u?"":u));}}function O(n){return function(u){if(this.l){var t=this.l[u.type+n];if(null==u.t)u.t=c$1++;else if(u.t<t.u)return;return t(l$1.event?l$1.event(u):u)}}}function j$1(n,u,t,i,r,o,e,f,c,s){var a,h,p,v,y,g,m,b,C,S,M,P,I,A,H,L,T,F=u.type;if(void 0!==u.constructor)return null;128&t.__u&&(c=!!(32&t.__u),o=[f=u.__e=t.__e]),(a=l$1.__b)&&a(u);n:if("function"==typeof F)try{if(b=u.props,C="prototype"in F&&F.prototype.render,S=(a=F.contextType)&&i[a.__c],M=a?S?S.props.value:a.__:i,t.__c?m=(h=u.__c=t.__c).__=h.__E:(C?u.__c=h=new F(b,M):(u.__c=h=new x$1(b,M),h.constructor=F,h.render=B$1),S&&S.sub(h),h.props=b,h.state||(h.state={}),h.context=M,h.__n=i,p=h.__d=!0,h.__h=[],h._sb=[]),C&&null==h.__s&&(h.__s=h.state),C&&null!=F.getDerivedStateFromProps&&(h.__s==h.state&&(h.__s=w$1({},h.__s)),w$1(h.__s,F.getDerivedStateFromProps(b,h.__s))),v=h.props,y=h.state,h.__v=u,p)C&&null==F.getDerivedStateFromProps&&null!=h.componentWillMount&&h.componentWillMount(),C&&null!=h.componentDidMount&&h.__h.push(h.componentDidMount);else {if(C&&null==F.getDerivedStateFromProps&&b!==v&&null!=h.componentWillReceiveProps&&h.componentWillReceiveProps(b,M),!h.__e&&(null!=h.shouldComponentUpdate&&!1===h.shouldComponentUpdate(b,h.__s,M)||u.__v==t.__v)){for(u.__v!=t.__v&&(h.props=b,h.state=h.__s,h.__d=!1),u.__e=t.__e,u.__k=t.__k,u.__k.some(function(n){n&&(n.__=u);}),P=0;P<h._sb.length;P++)h.__h.push(h._sb[P]);h._sb=[],h.__h.length&&e.push(h);break n}null!=h.componentWillUpdate&&h.componentWillUpdate(b,h.__s,M),C&&null!=h.componentDidUpdate&&h.__h.push(function(){h.componentDidUpdate(v,y,g);});}if(h.context=M,h.props=b,h.__P=n,h.__e=!1,I=l$1.__r,A=0,C){for(h.state=h.__s,h.__d=!1,I&&I(u),a=h.render(h.props,h.state,h.context),H=0;H<h._sb.length;H++)h.__h.push(h._sb[H]);h._sb=[];}else do{h.__d=!1,I&&I(u),a=h.render(h.props,h.state,h.context),h.state=h.__s;}while(h.__d&&++A<25);h.state=h.__s,null!=h.getChildContext&&(i=w$1(w$1({},i),h.getChildContext())),C&&!p&&null!=h.getSnapshotBeforeUpdate&&(g=h.getSnapshotBeforeUpdate(v,y)),f=$(n,d$1(L=null!=a&&a.type===k$1&&null==a.key?a.props.children:a)?L:[L],u,t,i,r,o,e,f,c,s),h.base=u.__e,u.__u&=-161,h.__h.length&&e.push(h),m&&(h.__E=h.__=null);}catch(n){if(u.__v=null,c||null!=o)if(n.then){for(u.__u|=c?160:128;f&&8==f.nodeType&&f.nextSibling;)f=f.nextSibling;o[o.indexOf(f)]=null,u.__e=f;}else for(T=o.length;T--;)_$1(o[T]);else u.__e=t.__e,u.__k=t.__k;l$1.__e(n,u,t);}else null==o&&u.__v==t.__v?(u.__k=t.__k,u.__e=t.__e):f=u.__e=N(t.__e,u,t,i,r,o,e,c,s);return (a=l$1.diffed)&&a(u),128&u.__u?void 0:f}function z$1(n,u,t){for(var i=0;i<t.length;i++)V(t[i],t[++i],t[++i]);l$1.__c&&l$1.__c(u,n),n.some(function(u){try{n=u.__h,u.__h=[],n.some(function(n){n.call(u);});}catch(n){l$1.__e(n,u.__v);}});}function N(u,t,i,r,o,e,f,c,s){var a,h,v,y,w,g,m,b=i.props,k=t.props,x=t.type;if("svg"==x?o="http://www.w3.org/2000/svg":"math"==x?o="http://www.w3.org/1998/Math/MathML":o||(o="http://www.w3.org/1999/xhtml"),null!=e)for(a=0;a<e.length;a++)if((w=e[a])&&"setAttribute"in w==!!x&&(x?w.localName==x:3==w.nodeType)){u=w,e[a]=null;break}if(null==u){if(null==x)return document.createTextNode(k);u=document.createElementNS(o,x,k.is&&k),c&&(l$1.__m&&l$1.__m(t,e),c=!1),e=null;}if(null===x)b===k||c&&u.data===k||(u.data=k);else {if(e=e&&n.call(u.childNodes),b=i.props||p$1,!c&&null!=e)for(b={},a=0;a<u.attributes.length;a++)b[(w=u.attributes[a]).name]=w.value;for(a in b)if(w=b[a],"children"==a);else if("dangerouslySetInnerHTML"==a)v=w;else if(!(a in k)){if("value"==a&&"defaultValue"in k||"checked"==a&&"defaultChecked"in k)continue;F(u,a,null,w,o);}for(a in k)w=k[a],"children"==a?y=w:"dangerouslySetInnerHTML"==a?h=w:"value"==a?g=w:"checked"==a?m=w:c&&"function"!=typeof w||b[a]===w||F(u,a,w,b[a],o);if(h)c||v&&(h.__html===v.__html||h.__html===u.innerHTML)||(u.innerHTML=h.__html),t.__k=[];else if(v&&(u.innerHTML=""),$(u,d$1(y)?y:[y],t,i,r,"foreignObject"==x?"http://www.w3.org/1999/xhtml":o,e,f,e?e[0]:i.__k&&C$1(i,0),c,s),null!=e)for(a=e.length;a--;)_$1(e[a]);c||(a="value","progress"==x&&null==g?u.removeAttribute("value"):void 0!==g&&(g!==u[a]||"progress"==x&&!g||"option"==x&&g!==b[a])&&F(u,a,g,b[a],o),a="checked",void 0!==m&&m!==u[a]&&F(u,a,m,b[a],o));}return u}function V(n,u,t){try{if("function"==typeof n){var i="function"==typeof n.__u;i&&n.__u(),i&&null==u||(n.__u=n(u));}else n.current=u;}catch(n){l$1.__e(n,t);}}function q$1(n,u,t){var i,r;if(l$1.unmount&&l$1.unmount(n),(i=n.ref)&&(i.current&&i.current!==n.__e||V(i,null,u)),null!=(i=n.__c)){if(i.componentWillUnmount)try{i.componentWillUnmount();}catch(n){l$1.__e(n,u);}i.base=i.__P=null;}if(i=n.__k)for(r=0;r<i.length;r++)i[r]&&q$1(i[r],u,t||"function"!=typeof n.type);t||_$1(n.__e),n.__c=n.__=n.__e=void 0;}function B$1(n,l,u){return this.constructor(n,u)}function D$1(u,t,i){var r,o,e,f;t==document&&(t=document.documentElement),l$1.__&&l$1.__(u,t),o=(r="function"==typeof i)?null:t.__k,e=[],f=[],j$1(t,u=(t).__k=g(k$1,null,[u]),o||p$1,p$1,t.namespaceURI,o?null:t.firstChild?n.call(t.childNodes):null,e,o?o.__e:t.firstChild,r,f),z$1(e,u,f);}function J(n,l){var u={__c:l="__cC"+h$1++,__:n,Consumer:function(n,l){return n.children(l)},Provider:function(n){var u,t;return this.getChildContext||(u=new Set,(t={})[l]=this,this.getChildContext=function(){return t},this.componentWillUnmount=function(){u=null;},this.shouldComponentUpdate=function(n){this.props.value!==n.value&&u.forEach(function(n){n.__e=!0,M(n);});},this.sub=function(n){u.add(n);var l=n.componentWillUnmount;n.componentWillUnmount=function(){u&&u.delete(n),l&&l.call(n);};}),n.children}};return u.Provider.__=u.Consumer.contextType=u}n=v$1.slice,l$1={__e:function(n,l,u,t){for(var i,r,o;l=l.__;)if((i=l.__c)&&!i.__)try{if((r=i.constructor)&&null!=r.getDerivedStateFromError&&(i.setState(r.getDerivedStateFromError(n)),o=i.__d),null!=i.componentDidCatch&&(i.componentDidCatch(n,t||{}),o=i.__d),o)return i.__E=i}catch(l){n=l;}throw n}},u$2=0,x$1.prototype.setState=function(n,l){var u;u=null!=this.__s&&this.__s!==this.state?this.__s:this.__s=w$1({},this.state),"function"==typeof n&&(n=n(w$1({},u),this.props)),n&&w$1(u,n),null!=n&&this.__v&&(l&&this._sb.push(l),M(this));},x$1.prototype.forceUpdate=function(n){this.__v&&(this.__e=!0,n&&this.__h.push(n),M(this));},x$1.prototype.render=k$1,i$1=[],o$1="function"==typeof Promise?Promise.prototype.then.bind(Promise.resolve()):setTimeout,e$1=function(n,l){return n.__v.__b-l.__v.__b},P.__r=0,f$2=/(PointerCapture)$|Capture$/i,c$1=0,s$1=O(!1),a$1=O(!0),h$1=0;
+  var n,l$1,u$2,i$1,r$1,o$1,e$1,f$2,c$1,a$1,s$1,h$1,p$1,v$1,y$1,d$1={},w$1=[],_$1=/acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i,g=Array.isArray;function m$1(n,l){for(var u in l)n[u]=l[u];return n}function b(n){n&&n.parentNode&&n.parentNode.removeChild(n);}function k$1(l,u,t){var i,r,o,e={};for(o in u)"key"==o?i=u[o]:"ref"==o?r=u[o]:e[o]=u[o];if(arguments.length>2&&(e.children=arguments.length>3?n.call(arguments,2):t),"function"==typeof l&&null!=l.defaultProps)for(o in l.defaultProps) void 0===e[o]&&(e[o]=l.defaultProps[o]);return x$1(l,e,i,r,null)}function x$1(n,t,i,r,o){var e={type:n,props:t,key:i,ref:r,__k:null,__:null,__b:0,__e:null,__c:null,constructor:void 0,__v:null==o?++u$2:o,__i:-1,__u:0};return null==o&&null!=l$1.vnode&&l$1.vnode(e),e}function S(n){return n.children}function C$1(n,l){this.props=n,this.context=l;}function $(n,l){if(null==l)return n.__?$(n.__,n.__i+1):null;for(var u;l<n.__k.length;l++)if(null!=(u=n.__k[l])&&null!=u.__e)return u.__e;return "function"==typeof n.type?$(n):null}function I(n){if(n.__P&&n.__d){var u=n.__v,t=u.__e,i=[],r=[],o=m$1({},u);o.__v=u.__v+1,l$1.vnode&&l$1.vnode(o),q$1(n.__P,o,u,n.__n,n.__P.namespaceURI,32&u.__u?[t]:null,i,null==t?$(u):t,!!(32&u.__u),r),o.__v=u.__v,o.__.__k[o.__i]=o,D$1(i,o,r),u.__e=u.__=null,o.__e!=t&&P(o);}}function P(n){if(null!=(n=n.__)&&null!=n.__c)return n.__e=n.__c.base=null,n.__k.some(function(l){if(null!=l&&null!=l.__e)return n.__e=n.__c.base=l.__e}),P(n)}function A$1(n){(!n.__d&&(n.__d=true)&&i$1.push(n)&&!H.__r++||r$1!=l$1.debounceRendering)&&((r$1=l$1.debounceRendering)||o$1)(H);}function H(){try{for(var n,l=1;i$1.length;)i$1.length>l&&i$1.sort(e$1),n=i$1.shift(),l=i$1.length,I(n);}finally{i$1.length=H.__r=0;}}function L(n,l,u,t,i,r,o,e,f,c,a){var s,h,p,v,y,_,g=t&&t.__k||w$1,m=l.length;for(f=T$1(u,l,g,f,m),s=0;s<m;s++)null!=(p=u.__k[s])&&(h=-1!=p.__i&&g[p.__i]||d$1,p.__i=s,_=q$1(n,p,h,i,r,o,e,f,c,a),v=p.__e,p.ref&&h.ref!=p.ref&&(h.ref&&J(h.ref,null,p),a.push(p.ref,p.__c||v,p)),null==y&&null!=v&&(y=v),4&p.__u?(f=j$1(p,f,n),h.__e&&(h.__e=null)):"function"==typeof p.type&&void 0!==_?f=_:v&&(f=v.nextSibling),p.__u&=-7);return u.__e=y,f}function T$1(n,l,u,t,i){var r,o,e,f,c,a=u.length,s=a,h=0;for(n.__k=new Array(i),r=0;r<i;r++)null!=(o=l[r])&&"boolean"!=typeof o&&"function"!=typeof o?("string"==typeof o||"number"==typeof o||"bigint"==typeof o||o.constructor==String?o=n.__k[r]=x$1(null,o,null,null,null):g(o)?o=n.__k[r]=x$1(S,{children:o},null,null,null):void 0===o.constructor&&o.__b>0?o=n.__k[r]=x$1(o.type,o.props,o.key,o.ref?o.ref:null,o.__v):n.__k[r]=o,f=r+h,o.__=n,o.__b=n.__b+1,e=null,-1!=(c=o.__i=O(o,u,f,s))&&(s--,(e=u[c])&&(e.__u|=2)),null==e||null==e.__v?(-1==c&&(i>a?h--:i<a&&h++),"function"!=typeof o.type&&(o.__u|=4)):c!=f&&(c==f-1?h--:c==f+1?h++:(c>f?h--:h++,o.__u|=4))):n.__k[r]=null;if(s)for(r=0;r<a;r++)null!=(e=u[r])&&0==(2&e.__u)&&(e.__e==t&&(t=$(e)),K(e,e));return t}function j$1(n,l,u){var t,i;if("function"==typeof n.type){for(t=n.__k,i=0;t&&i<t.length;i++)t[i]&&(t[i].__=n,l=j$1(t[i],l,u));return l}n.__e!=l&&(l&&n.type&&!l.parentNode&&(l=$(n)),l=u.insertBefore(n.__e,l||null));do{l=l&&l.nextSibling;}while(null!=l&&8==l.nodeType);return l}function O(n,l,u,t){var i,r,o,e=n.key,f=n.type,c=l[u],a=null!=c&&0==(2&c.__u);if(null===c&&null==e||a&&e==c.key&&f==c.type)return u;if(t>(a?1:0))for(i=u-1,r=u+1;i>=0||r<l.length;)if(null!=(c=l[o=i>=0?i--:r++])&&0==(2&c.__u)&&e==c.key&&f==c.type)return o;return  -1}function z$1(n,l,u){"-"==l[0]?n.setProperty(l,null==u?"":u):n[l]=null==u?"":"number"!=typeof u||_$1.test(l)?u:u+"px";}function N(n,l,u,t,i){var r,o;n:if("style"==l)if("string"==typeof u)n.style.cssText=u;else {if("string"==typeof t&&(n.style.cssText=t=""),t)for(l in t)u&&l in u||z$1(n.style,l,"");if(u)for(l in u)t&&u[l]==t[l]||z$1(n.style,l,u[l]);}else if("o"==l[0]&&"n"==l[1])r=l!=(l=l.replace(s$1,"$1")),o=l.toLowerCase(),l=o in n||"onFocusOut"==l||"onFocusIn"==l?o.slice(2):l.slice(2),n.l||(n.l={}),n.l[l+r]=u,u?t?u[a$1]=t[a$1]:(u[a$1]=h$1,n.addEventListener(l,r?v$1:p$1,r)):n.removeEventListener(l,r?v$1:p$1,r);else {if("http://www.w3.org/2000/svg"==i)l=l.replace(/xlink(H|:h)/,"h").replace(/sName$/,"s");else if("width"!=l&&"height"!=l&&"href"!=l&&"list"!=l&&"form"!=l&&"tabIndex"!=l&&"download"!=l&&"rowSpan"!=l&&"colSpan"!=l&&"role"!=l&&"popover"!=l&&l in n)try{n[l]=null==u?"":u;break n}catch(n){}"function"==typeof u||(null==u||false===u&&"-"!=l[4]?n.removeAttribute(l):n.setAttribute(l,"popover"==l&&1==u?"":u));}}function V(n){return function(u){if(this.l){var t=this.l[u.type+n];if(null==u[c$1])u[c$1]=h$1++;else if(u[c$1]<t[a$1])return;return t(l$1.event?l$1.event(u):u)}}}function q$1(n,u,t,i,r,o,e,f,c,a){var s,h,p,v,y,d,_,k,x,M,I,P,A,H,T,j,F=u.type;if(void 0!==u.constructor)return null;128&t.__u&&(c=!!(32&t.__u),o=[f=u.__e=t.__e]),(s=l$1.__b)&&s(u);n:if("function"==typeof F){h=e.length;try{if(x=u.props,M=F.prototype&&F.prototype.render,I=(s=F.contextType)&&i[s.__c],P=s?I?I.props.value:s.__:i,t.__c?k=(p=u.__c=t.__c).__=p.__E:(M?u.__c=p=new F(x,P):(u.__c=p=new C$1(x,P),p.constructor=F,p.render=Q),I&&I.sub(p),p.state||(p.state={}),p.__n=i,v=p.__d=!0,p.__h=[],p._sb=[]),M&&null==p.__s&&(p.__s=p.state),M&&null!=F.getDerivedStateFromProps&&(p.__s==p.state&&(p.__s=m$1({},p.__s)),m$1(p.__s,F.getDerivedStateFromProps(x,p.__s))),y=p.props,d=p.state,p.__v=u,v)M&&null==F.getDerivedStateFromProps&&null!=p.componentWillMount&&p.componentWillMount(),M&&null!=p.componentDidMount&&p.__h.push(p.componentDidMount);else {if(M&&null==F.getDerivedStateFromProps&&x!==y&&null!=p.componentWillReceiveProps&&p.componentWillReceiveProps(x,P),u.__v==t.__v||!p.__e&&null!=p.shouldComponentUpdate&&!1===p.shouldComponentUpdate(x,p.__s,P)){u.__v!=t.__v&&(p.props=x,p.state=p.__s,p.__d=!1),u.__e=t.__e,u.__k=t.__k,u.__k.some(function(n){n&&(n.__=u);}),w$1.push.apply(p.__h,p._sb),p._sb=[],p.__h.length&&e.push(p),f=$(t);break n}null!=p.componentWillUpdate&&p.componentWillUpdate(x,p.__s,P),M&&null!=p.componentDidUpdate&&p.__h.push(function(){p.componentDidUpdate(y,d,_);});}if(p.context=P,p.props=x,p.__P=n,p.__e=!1,A=l$1.__r,H=0,M)p.state=p.__s,p.__d=!1,A&&A(u),s=p.render(p.props,p.state,p.context),w$1.push.apply(p.__h,p._sb),p._sb=[];else do{p.__d=!1,A&&A(u),s=p.render(p.props,p.state,p.context),p.state=p.__s;}while(p.__d&&++H<25);p.state=p.__s,null!=p.getChildContext&&(i=m$1(m$1({},i),p.getChildContext())),M&&!v&&null!=p.getSnapshotBeforeUpdate&&(_=p.getSnapshotBeforeUpdate(y,d)),T=null!=s&&s.type===S&&null==s.key?E(s.props.children):s,f=L(n,g(T)?T:[T],u,t,i,r,o,e,f,c,a),p.base=u.__e,u.__u&=-161,p.__h.length&&e.push(p),k&&(p.__E=p.__=null);}catch(n){if(e.length=h,u.__v=null,c||null!=o){if(n.then){for(u.__u|=c?160:128;f&&8==f.nodeType&&f.nextSibling;)f=f.nextSibling;null!=o&&(o[o.indexOf(f)]=null),u.__e=f;}else if(null!=o)for(j=o.length;j--;)b(o[j]);}else u.__e=t.__e;null==u.__k&&(u.__k=t.__k||[]),n.then||B$1(u),l$1.__e(n,u,t);}}else null==o&&u.__v==t.__v?(u.__k=t.__k,u.__e=t.__e):f=u.__e=G(t.__e,u,t,i,r,o,e,c,a);return (s=l$1.diffed)&&s(u),128&u.__u?void 0:f}function B$1(n){n&&(n.__c&&(n.__c.__e=true),n.__k&&n.__k.some(B$1));}function D$1(n,u,t){for(var i=0;i<t.length;i++)J(t[i],t[++i],t[++i]);l$1.__c&&l$1.__c(u,n),n.some(function(u){try{n=u.__h,u.__h=[],n.some(function(n){n.call(u);});}catch(n){l$1.__e(n,u.__v);}});}function E(n){return "object"!=typeof n||null==n||n.__b>0?n:g(n)?n.map(E):void 0!==n.constructor?null:m$1({},n)}function G(u,t,i,r,o,e,f,c,a){var s,h,p,v,y,w,_,m=i.props||d$1,k=t.props,x=t.type;if("svg"==x?o="http://www.w3.org/2000/svg":"math"==x?o="http://www.w3.org/1998/Math/MathML":o||(o="http://www.w3.org/1999/xhtml"),null!=e)for(s=0;s<e.length;s++)if((y=e[s])&&"setAttribute"in y==!!x&&(x?y.localName==x:3==y.nodeType)){u=y,e[s]=null;break}if(null==u){if(null==x)return document.createTextNode(k);u=document.createElementNS(o,x,k.is&&k),c&&(l$1.__m&&l$1.__m(t,e),c=false),e=null;}if(null==x)m===k||c&&u.data==k||(u.data=k);else {if(e="textarea"==x&&null!=k.defaultValue?null:e&&n.call(u.childNodes),!c&&null!=e)for(m={},s=0;s<u.attributes.length;s++)m[(y=u.attributes[s]).name]=y.value;for(s in m)y=m[s],"dangerouslySetInnerHTML"==s?p=y:"children"==s||s in k||"value"==s&&"defaultValue"in k||"checked"==s&&"defaultChecked"in k||N(u,s,null,y,o);for(s in k)y=k[s],"children"==s?v=y:"dangerouslySetInnerHTML"==s?h=y:"value"==s?w=y:"checked"==s?_=y:c&&"function"!=typeof y||m[s]===y||N(u,s,y,m[s],o);if(h)c||p&&(h.__html==p.__html||h.__html==u.innerHTML)||(u.innerHTML=h.__html),t.__k=[];else if(p&&(u.innerHTML=""),L("template"==t.type?u.content:u,g(v)?v:[v],t,i,r,"foreignObject"==x?"http://www.w3.org/1999/xhtml":o,e,f,e?e[0]:i.__k&&$(i,0),c,a),null!=e)for(s=e.length;s--;)b(e[s]);c&&"textarea"!=x||(s="value","progress"==x&&null==w?u.removeAttribute("value"):null!=w&&(w!==u[s]||"progress"==x&&!w||"option"==x&&w!=m[s])&&N(u,s,w,m[s],o),s="checked",null!=_&&_!=u[s]&&N(u,s,_,m[s],o));}return u}function J(n,u,t){try{if("function"==typeof n){var i="function"==typeof n.__u;i&&n.__u(),i&&null==u||(n.__u=n(u));}else n.current=u;}catch(n){l$1.__e(n,t);}}function K(n,u,t){var i,r;if(l$1.unmount&&l$1.unmount(n),(i=n.ref)&&(i.current&&i.current!=n.__e||J(i,null,u)),null!=(i=n.__c)){if(i.componentWillUnmount)try{i.componentWillUnmount();}catch(n){l$1.__e(n,u);}i.base=i.__P=i.__n=null;}if(i=n.__k)for(r=0;r<i.length;r++)i[r]&&K(i[r],u,t||"function"!=typeof n.type);t||b(n.__e),n.__c=n.__=n.__e=void 0;}function Q(n,l,u){return this.constructor(n,u)}function R(u,t,i){var r,o,e,f;t==document&&(t=document.documentElement),l$1.__&&l$1.__(u,t),o=(r="function"=="undefined")?null:t.__k,e=[],f=[],q$1(t,u=(t).__k=k$1(S,null,[u]),o||d$1,d$1,t.namespaceURI,o?null:t.firstChild?n.call(t.childNodes):null,e,o?o.__e:t.firstChild,r,f),D$1(e,u,f),u.props.children=null;}function X(n){function l(n){var u,t;return this.getChildContext||(u=new Set,(t={})[l.__c]=this,this.getChildContext=function(){return t},this.componentWillUnmount=function(){u=null;},this.shouldComponentUpdate=function(n){this.props.value!=n.value&&u.forEach(function(n){n.__e=true,A$1(n);});},this.sub=function(n){u.add(n);var l=n.componentWillUnmount;n.componentWillUnmount=function(){u&&u.delete(n),l&&l.call(n);};}),n.children}return l.__c="__cC"+y$1++,l.__=n,l.Provider=l.__l=(l.Consumer=function(n,l){return n.children(l)}).contextType=l,l}n=w$1.slice,l$1={__e:function(n,l,u,t){for(var i,r,o;l=l.__;)if((i=l.__c)&&!i.__)try{if((r=i.constructor)&&null!=r.getDerivedStateFromError&&(i.setState(r.getDerivedStateFromError(n)),o=i.__d),null!=i.componentDidCatch&&(i.componentDidCatch(n,t||{}),o=i.__d),o)return i.__E=i}catch(l){n=l;}throw n}},u$2=0,C$1.prototype.setState=function(n,l){var u;u=null!=this.__s&&this.__s!=this.state?this.__s:this.__s=m$1({},this.state),"function"==typeof n&&(n=n(m$1({},u),this.props)),n&&m$1(u,n),null!=n&&this.__v&&(l&&this._sb.push(l),A$1(this));},C$1.prototype.forceUpdate=function(n){this.__v&&(this.__e=true,n&&this.__h.push(n),A$1(this));},C$1.prototype.render=S,i$1=[],o$1="function"==typeof Promise?Promise.prototype.then.bind(Promise.resolve()):setTimeout,e$1=function(n,l){return n.__v.__b-l.__v.__b},H.__r=0,f$2=Math.random().toString(8),c$1="__d"+f$2,a$1="__a"+f$2,s$1=/(PointerCapture)$|Capture$/i,h$1=0,p$1=V(false),v$1=V(true),y$1=0;
 
-  var f$1=0;function u$1(e,t,n,o,i,u){t||(t={});var a,c,p=t;if("ref"in p)for(c in p={},t)"ref"==c?a=t[c]:p[c]=t[c];var l={type:e,props:p,key:n,ref:a,__k:null,__:null,__b:0,__e:null,__c:null,constructor:void 0,__v:--f$1,__i:-1,__u:0,__source:i,__self:u};if("function"==typeof e&&(a=e.defaultProps))for(c in a)void 0===p[c]&&(p[c]=a[c]);return l$1.vnode&&l$1.vnode(l),l}
+  var f$1=0;function u$1(e,t,n,o,i,u){t||(t={});var a,c,p=t;if("ref"in p)for(c in p={},t)"ref"==c?a=t[c]:p[c]=t[c];var l={type:e,props:p,key:n,ref:a,__k:null,__:null,__b:0,__e:null,__c:null,constructor:void 0,__v:--f$1,__i:-1,__u:0,__source:i,__self:u};if("function"==typeof e&&(a=e.defaultProps))for(c in a) void 0===p[c]&&(p[c]=a[c]);return l$1.vnode&&l$1.vnode(l),l}
 
   function count$1(node) {
     var sum = 0,
@@ -626,16 +626,16 @@ var drawChart = (function (exports) {
   let count = 0;
   class Id {
       constructor(id) {
-          this._id = id;
+          this.idValue = id;
           const url = new URL(window.location.href);
           url.hash = id;
-          this._href = url.toString();
+          this.hrefValue = url.toString();
       }
       get id() {
-          return this._id;
+          return this.idValue;
       }
       get href() {
-          return this._href;
+          return this.hrefValue;
       }
       toString() {
           return `url(${this.href})`;
@@ -663,12 +663,12 @@ var drawChart = (function (exports) {
       return availableSizeProperties;
   };
 
-  var t,r,u,i,o=0,f=[],c=l$1,e=c.__b,a=c.__r,v=c.diffed,l=c.__c,m=c.unmount,s=c.__;function d(n,t){c.__h&&c.__h(r,n,o||t),o=0;var u=r.__H||(r.__H={__:[],__h:[]});return n>=u.__.length&&u.__.push({}),u.__[n]}function h(n){return o=1,p(D,n)}function p(n,u,i){var o=d(t++,2);if(o.t=n,!o.__c&&(o.__=[D(void 0,u),function(n){var t=o.__N?o.__N[0]:o.__[0],r=o.t(t,n);t!==r&&(o.__N=[r,o.__[1]],o.__c.setState({}));}],o.__c=r,!r.u)){var f=function(n,t,r){if(!o.__c.__H)return !0;var u=o.__c.__H.__.filter(function(n){return !!n.__c});if(u.every(function(n){return !n.__N}))return !c||c.call(this,n,t,r);var i=o.__c.props!==n;return u.forEach(function(n){if(n.__N){var t=n.__[0];n.__=n.__N,n.__N=void 0,t!==n.__[0]&&(i=!0);}}),c&&c.call(this,n,t,r)||i};r.u=!0;var c=r.shouldComponentUpdate,e=r.componentWillUpdate;r.componentWillUpdate=function(n,t,r){if(this.__e){var u=c;c=void 0,f(n,t,r),c=u;}e&&e.call(this,n,t,r);},r.shouldComponentUpdate=f;}return o.__N||o.__}function y(n,u){var i=d(t++,3);!c.__s&&C(i.__H,u)&&(i.__=n,i.i=u,r.__H.__h.push(i));}function _(n,u){var i=d(t++,4);!c.__s&&C(i.__H,u)&&(i.__=n,i.i=u,r.__h.push(i));}function A(n){return o=5,T(function(){return {current:n}},[])}function T(n,r){var u=d(t++,7);return C(u.__H,r)&&(u.__=n(),u.__H=r,u.__h=n),u.__}function q(n,t){return o=8,T(function(){return n},t)}function x(n){var u=r.context[n.__c],i=d(t++,9);return i.c=n,u?(null==i.__&&(i.__=!0,u.sub(r)),u.props.value):n.__}function j(){for(var n;n=f.shift();)if(n.__P&&n.__H)try{n.__H.__h.forEach(z),n.__H.__h.forEach(B),n.__H.__h=[];}catch(t){n.__H.__h=[],c.__e(t,n.__v);}}c.__b=function(n){r=null,e&&e(n);},c.__=function(n,t){n&&t.__k&&t.__k.__m&&(n.__m=t.__k.__m),s&&s(n,t);},c.__r=function(n){a&&a(n),t=0;var i=(r=n.__c).__H;i&&(u===r?(i.__h=[],r.__h=[],i.__.forEach(function(n){n.__N&&(n.__=n.__N),n.i=n.__N=void 0;})):(i.__h.forEach(z),i.__h.forEach(B),i.__h=[],t=0)),u=r;},c.diffed=function(n){v&&v(n);var t=n.__c;t&&t.__H&&(t.__H.__h.length&&(1!==f.push(t)&&i===c.requestAnimationFrame||((i=c.requestAnimationFrame)||w)(j)),t.__H.__.forEach(function(n){n.i&&(n.__H=n.i),n.i=void 0;})),u=r=null;},c.__c=function(n,t){t.some(function(n){try{n.__h.forEach(z),n.__h=n.__h.filter(function(n){return !n.__||B(n)});}catch(r){t.some(function(n){n.__h&&(n.__h=[]);}),t=[],c.__e(r,n.__v);}}),l&&l(n,t);},c.unmount=function(n){m&&m(n);var t,r=n.__c;r&&r.__H&&(r.__H.__.forEach(function(n){try{z(n);}catch(n){t=n;}}),r.__H=void 0,t&&c.__e(t,r.__v));};var k="function"==typeof requestAnimationFrame;function w(n){var t,r=function(){clearTimeout(u),k&&cancelAnimationFrame(t),setTimeout(n);},u=setTimeout(r,100);k&&(t=requestAnimationFrame(r));}function z(n){var t=r,u=n.__c;"function"==typeof u&&(n.__c=void 0,u()),r=t;}function B(n){var t=r;n.__c=n.__(),r=t;}function C(n,t){return !n||n.length!==t.length||t.some(function(t,r){return t!==n[r]})}function D(n,t){return "function"==typeof t?t(n):t}
+  var t,r,u,i,o=0,f=[],c=l$1,e=c.__b,a=c.__r,v=c.diffed,l=c.__c,m=c.unmount,p=c.__;function s(n,t){c.__h&&c.__h(r,n,o||t),o=0;var u=r.__H||(r.__H={__:[],__h:[]});return n>=u.__.length&&u.__.push({}),u.__[n]}function d(n){return o=1,y(D,n)}function y(n,u,i){var o=s(t++,2);if(o.t=n,!o.__c&&(o.__=[D(void 0,u),function(n){var t=o.__N?o.__N[0]:o.__[0],r=o.t(t,n);t!==r&&(o.__N=[r,o.__[1]],o.__c.setState({}));}],o.__c=r,!r.__f)){var f=function(n,t,r){if(!o.__c.__H)return  true;var u=false,i=o.__c.props!==n;if(o.__c.__H.__.some(function(n){if(n.__N){u=true;var t=n.__[0];n.__=n.__N,n.__N=void 0,t!==n.__[0]&&(i=true);}}),c){var f=c.call(this,n,t,r);return u?f||i:f}return !u||i};r.__f=true;var c=r.shouldComponentUpdate,e=r.componentWillUpdate;r.componentWillUpdate=function(n,t,r){if(this.__e){var u=c;c=void 0,f(n,t,r),c=u;}e&&e.call(this,n,t,r);},r.shouldComponentUpdate=f;}return o.__N||o.__}function h(n,u){var i=s(t++,3);!c.__s&&C(i.__H,u)&&(i.__=n,i.u=u,r.__H.__h.push(i));}function _(n,u){var i=s(t++,4);!c.__s&&C(i.__H,u)&&(i.__=n,i.u=u,r.__h.push(i));}function A(n){return o=5,T(function(){return {current:n}},[])}function T(n,r){var u=s(t++,7);return C(u.__H,r)&&(u.__=n(),u.__H=r,u.__h=n),u.__}function q(n,t){return o=8,T(function(){return n},t)}function x(n){var u=r.context[n.__c],i=s(t++,9);return i.c=n,u?(null==i.__&&(i.__=true,u.sub(r)),u.props.value):n.__}function j(){for(var n;n=f.shift();){var t=n.__H;if(n.__P&&t)try{t.__h.some(z),t.__h.some(B),t.__h=[];}catch(r){t.__h=[],c.__e(r,n.__v);}}}c.__b=function(n){r=null,e&&e(n);},c.__=function(n,t){n&&t.__k&&t.__k.__m&&(n.__m=t.__k.__m),p&&p(n,t);},c.__r=function(n){a&&a(n),t=0;var i=(r=n.__c).__H;i&&(u===r?(i.__h=[],r.__h=[],i.__.some(function(n){n.__N&&(n.__=n.__N),n.u=n.__N=void 0;})):(i.__h.some(z),i.__h.some(B),i.__h=[],t=0)),u=r;},c.diffed=function(n){v&&v(n);var t=n.__c;t&&t.__H&&(t.__H.__h.length&&(1!==f.push(t)&&i===c.requestAnimationFrame||((i=c.requestAnimationFrame)||w)(j)),t.__H.__.some(function(n){n.u&&(n.__H=n.u,n.u=void 0);})),u=r=null;},c.__c=function(n,t){t.some(function(n){try{n.__h.some(z),n.__h=n.__h.filter(function(n){return !n.__||B(n)});}catch(r){t.some(function(n){n.__h&&(n.__h=[]);}),t=[],c.__e(r,n.__v);}}),l&&l(n,t);},c.unmount=function(n){m&&m(n);var t,r=n.__c;r&&r.__H&&(r.__H.__.some(function(n){try{z(n);}catch(n){t=n;}}),r.__H=void 0,t&&c.__e(t,r.__v));};var k="function"==typeof requestAnimationFrame;function w(n){var t,r=function(){clearTimeout(u),k&&cancelAnimationFrame(t),setTimeout(n);},u=setTimeout(r,35);k&&(t=requestAnimationFrame(r));}function z(n){var t=r,u=n.__c;"function"==typeof u&&(n.__c=void 0,u()),r=t;}function B(n){var t=r;n.__c=n.__(),r=t;}function C(n,t){return !n||n.length!==t.length||t.some(function(t,r){return t!==n[r]})}function D(n,t){return "function"==typeof t?t(n):t}
 
   const PLACEHOLDER = "*/**/file.js";
   const SideBar = ({ availableSizeProperties, sizeProperty, setSizeProperty, onExcludeChange, onIncludeChange, }) => {
-      const [includeValue, setIncludeValue] = h("");
-      const [excludeValue, setExcludeValue] = h("");
+      const [includeValue, setIncludeValue] = d("");
+      const [excludeValue, setExcludeValue] = d("");
       const handleSizePropertyChange = (sizeProp) => () => {
           if (sizeProp !== sizeProperty) {
               setSizeProperty(sizeProp);
@@ -706,6 +706,8 @@ var drawChart = (function (exports) {
 
   	const WIN_SLASH = '\\\\/';
   	const WIN_NO_SLASH = `[^${WIN_SLASH}]`;
+
+  	const DEFAULT_MAX_EXTGLOB_RECURSION = 0;
 
   	/**
   	 * Posix glob regex
@@ -773,6 +775,7 @@ var drawChart = (function (exports) {
   	 */
 
   	const POSIX_REGEX_SOURCE = {
+  	  __proto__: null,
   	  alnum: 'a-zA-Z0-9',
   	  alpha: 'a-zA-Z',
   	  ascii: '\\x00-\\x7F',
@@ -790,6 +793,7 @@ var drawChart = (function (exports) {
   	};
 
   	constants$1 = {
+  	  DEFAULT_MAX_EXTGLOB_RECURSION,
   	  MAX_LENGTH: 1024 * 64,
   	  POSIX_REGEX_SOURCE,
 
@@ -803,6 +807,7 @@ var drawChart = (function (exports) {
 
   	  // Replace globs with equivalent patterns to reduce parsing time.
   	  REPLACEMENTS: {
+  	    __proto__: null,
   	    '***': '*',
   	    '**/**': '**',
   	    '**/**/**': '**'
@@ -1417,6 +1422,307 @@ var drawChart = (function (exports) {
   	  return `Missing ${type}: "${char}" - use "\\\\${char}" to match literal characters`;
   	};
 
+  	const splitTopLevel = input => {
+  	  const parts = [];
+  	  let bracket = 0;
+  	  let paren = 0;
+  	  let quote = 0;
+  	  let value = '';
+  	  let escaped = false;
+
+  	  for (const ch of input) {
+  	    if (escaped === true) {
+  	      value += ch;
+  	      escaped = false;
+  	      continue;
+  	    }
+
+  	    if (ch === '\\') {
+  	      value += ch;
+  	      escaped = true;
+  	      continue;
+  	    }
+
+  	    if (ch === '"') {
+  	      quote = quote === 1 ? 0 : 1;
+  	      value += ch;
+  	      continue;
+  	    }
+
+  	    if (quote === 0) {
+  	      if (ch === '[') {
+  	        bracket++;
+  	      } else if (ch === ']' && bracket > 0) {
+  	        bracket--;
+  	      } else if (bracket === 0) {
+  	        if (ch === '(') {
+  	          paren++;
+  	        } else if (ch === ')' && paren > 0) {
+  	          paren--;
+  	        } else if (ch === '|' && paren === 0) {
+  	          parts.push(value);
+  	          value = '';
+  	          continue;
+  	        }
+  	      }
+  	    }
+
+  	    value += ch;
+  	  }
+
+  	  parts.push(value);
+  	  return parts;
+  	};
+
+  	const isPlainBranch = branch => {
+  	  let escaped = false;
+
+  	  for (const ch of branch) {
+  	    if (escaped === true) {
+  	      escaped = false;
+  	      continue;
+  	    }
+
+  	    if (ch === '\\') {
+  	      escaped = true;
+  	      continue;
+  	    }
+
+  	    if (/[?*+@!()[\]{}]/.test(ch)) {
+  	      return false;
+  	    }
+  	  }
+
+  	  return true;
+  	};
+
+  	const normalizeSimpleBranch = branch => {
+  	  let value = branch.trim();
+  	  let changed = true;
+
+  	  while (changed === true) {
+  	    changed = false;
+
+  	    if (/^@\([^\\()[\]{}|]+\)$/.test(value)) {
+  	      value = value.slice(2, -1);
+  	      changed = true;
+  	    }
+  	  }
+
+  	  if (!isPlainBranch(value)) {
+  	    return;
+  	  }
+
+  	  return value.replace(/\\(.)/g, '$1');
+  	};
+
+  	const hasRepeatedCharPrefixOverlap = branches => {
+  	  const values = branches.map(normalizeSimpleBranch).filter(Boolean);
+
+  	  for (let i = 0; i < values.length; i++) {
+  	    for (let j = i + 1; j < values.length; j++) {
+  	      const a = values[i];
+  	      const b = values[j];
+  	      const char = a[0];
+
+  	      if (!char || a !== char.repeat(a.length) || b !== char.repeat(b.length)) {
+  	        continue;
+  	      }
+
+  	      if (a === b || a.startsWith(b) || b.startsWith(a)) {
+  	        return true;
+  	      }
+  	    }
+  	  }
+
+  	  return false;
+  	};
+
+  	const parseRepeatedExtglob = (pattern, requireEnd = true) => {
+  	  if ((pattern[0] !== '+' && pattern[0] !== '*') || pattern[1] !== '(') {
+  	    return;
+  	  }
+
+  	  let bracket = 0;
+  	  let paren = 0;
+  	  let quote = 0;
+  	  let escaped = false;
+
+  	  for (let i = 1; i < pattern.length; i++) {
+  	    const ch = pattern[i];
+
+  	    if (escaped === true) {
+  	      escaped = false;
+  	      continue;
+  	    }
+
+  	    if (ch === '\\') {
+  	      escaped = true;
+  	      continue;
+  	    }
+
+  	    if (ch === '"') {
+  	      quote = quote === 1 ? 0 : 1;
+  	      continue;
+  	    }
+
+  	    if (quote === 1) {
+  	      continue;
+  	    }
+
+  	    if (ch === '[') {
+  	      bracket++;
+  	      continue;
+  	    }
+
+  	    if (ch === ']' && bracket > 0) {
+  	      bracket--;
+  	      continue;
+  	    }
+
+  	    if (bracket > 0) {
+  	      continue;
+  	    }
+
+  	    if (ch === '(') {
+  	      paren++;
+  	      continue;
+  	    }
+
+  	    if (ch === ')') {
+  	      paren--;
+
+  	      if (paren === 0) {
+  	        if (requireEnd === true && i !== pattern.length - 1) {
+  	          return;
+  	        }
+
+  	        return {
+  	          type: pattern[0],
+  	          body: pattern.slice(2, i),
+  	          end: i
+  	        };
+  	      }
+  	    }
+  	  }
+  	};
+
+  	const buildCharClassStar = chars => {
+  	  const source = chars.length === 1
+  	    ? utils.escapeRegex(chars[0])
+  	    : `[${chars.map(ch => utils.escapeRegex(ch)).join('')}]`;
+
+  	  return `${source}*`;
+  	};
+
+  	const getStarExtglobSequenceChars = pattern => {
+  	  let index = 0;
+  	  const chars = [];
+
+  	  while (index < pattern.length) {
+  	    const match = parseRepeatedExtglob(pattern.slice(index), false);
+
+  	    if (!match || match.type !== '*') {
+  	      return;
+  	    }
+
+  	    const branches = splitTopLevel(match.body).map(branch => branch.trim());
+  	    if (branches.length !== 1) {
+  	      return;
+  	    }
+
+  	    const branch = normalizeSimpleBranch(branches[0]);
+  	    if (!branch || branch.length !== 1) {
+  	      return;
+  	    }
+
+  	    chars.push(branch);
+  	    index += match.end + 1;
+  	  }
+
+  	  if (chars.length < 1) {
+  	    return;
+  	  }
+
+  	  return chars;
+  	};
+
+  	const repeatedExtglobRecursion = pattern => {
+  	  let depth = 0;
+  	  let value = pattern.trim();
+  	  let match = parseRepeatedExtglob(value);
+
+  	  while (match) {
+  	    depth++;
+  	    value = match.body.trim();
+  	    match = parseRepeatedExtglob(value);
+  	  }
+
+  	  return depth;
+  	};
+
+  	const analyzeRepeatedExtglob = (body, options) => {
+  	  if (options.maxExtglobRecursion === false) {
+  	    return { risky: false };
+  	  }
+
+  	  const max =
+  	    typeof options.maxExtglobRecursion === 'number'
+  	      ? options.maxExtglobRecursion
+  	      : constants.DEFAULT_MAX_EXTGLOB_RECURSION;
+
+  	  const branches = splitTopLevel(body).map(branch => branch.trim());
+
+  	  if (branches.length > 1) {
+  	    if (
+  	      branches.some(branch => branch === '') ||
+  	      branches.some(branch => /^[*?]+$/.test(branch)) ||
+  	      hasRepeatedCharPrefixOverlap(branches)
+  	    ) {
+  	      return { risky: true };
+  	    }
+  	  }
+
+  	  // A repeated extglob is "risky" (prone to catastrophic backtracking) when a
+  	  // branch is itself a `*(...)` sequence, since that nests an unbounded quantifier
+  	  // inside the outer `+(...)`/`*(...)`. When *every* branch reduces to single
+  	  // characters we can emit one flat, ReDoS-safe character class that preserves the
+  	  // meaning of ALL branches (e.g. `+(*(a)|*(b))` -> `[ab]*`), rather than dropping
+  	  // every branch but the first.
+  	  const safeChars = [];
+  	  let sawStarSequence = false;
+  	  let combinable = true;
+
+  	  for (const branch of branches) {
+  	    const chars = getStarExtglobSequenceChars(branch);
+  	    if (chars) {
+  	      sawStarSequence = true;
+  	      safeChars.push(...chars);
+  	      continue;
+  	    }
+
+  	    const literal = normalizeSimpleBranch(branch);
+  	    if (literal && literal.length === 1) {
+  	      safeChars.push(literal);
+  	      continue;
+  	    }
+
+  	    combinable = false;
+
+  	    if (repeatedExtglobRecursion(branch) > max) {
+  	      return { risky: true };
+  	    }
+  	  }
+
+  	  if (sawStarSequence) {
+  	    return combinable
+  	      ? { risky: true, safeOutput: buildCharClassStar([...new Set(safeChars)]) }
+  	      : { risky: true };
+  	  }
+
+  	  return { risky: false };
+  	};
+
   	/**
   	 * Parse the given input string.
   	 * @param {String} input
@@ -1597,6 +1903,8 @@ var drawChart = (function (exports) {
   	    token.prev = prev;
   	    token.parens = state.parens;
   	    token.output = state.output;
+  	    token.startIndex = state.index;
+  	    token.tokensIndex = tokens.length;
   	    const output = (opts.capture ? '(' : '') + token.open;
 
   	    increment('parens');
@@ -1606,6 +1914,34 @@ var drawChart = (function (exports) {
   	  };
 
   	  const extglobClose = token => {
+  	    const literal = input.slice(token.startIndex, state.index + 1);
+  	    const body = input.slice(token.startIndex + 2, state.index);
+  	    const analysis = analyzeRepeatedExtglob(body, opts);
+
+  	    if ((token.type === 'plus' || token.type === 'star') && analysis.risky) {
+  	      const safeOutput = analysis.safeOutput
+  	        ? (token.output ? '' : ONE_CHAR) + (opts.capture ? `(${analysis.safeOutput})` : analysis.safeOutput)
+  	        : undefined;
+  	      const open = tokens[token.tokensIndex];
+
+  	      open.type = 'text';
+  	      open.value = literal;
+  	      open.output = safeOutput || utils.escapeRegex(literal);
+
+  	      for (let i = token.tokensIndex + 1; i < tokens.length; i++) {
+  	        tokens[i].value = '';
+  	        tokens[i].output = '';
+  	        delete tokens[i].suffix;
+  	      }
+
+  	      state.output = token.output + open.output;
+  	      state.backtrack = true;
+
+  	      push({ type: 'paren', extglob: true, value, output: '' });
+  	      decrement('parens');
+  	      return;
+  	    }
+
   	    let output = token.close + (opts.capture ? ')' : '');
   	    let rest;
 
@@ -2485,6 +2821,18 @@ var drawChart = (function (exports) {
   	 * const isMatch = picomatch('*.!(*a)');
   	 * console.log(isMatch('a.a')); //=> false
   	 * console.log(isMatch('a.b')); //=> true
+  	 *
+  	 * // For environments without `node.js`, `picomatch/posix` provides you a dependency-free matcher, without automatic OS detection.
+  	 * const picomatch = require('picomatch/posix');
+  	 * // the same API, defaulting to posix paths
+  	 * const isMatch = picomatch('a/*');
+  	 * console.log(isMatch('a\\b')); //=> false
+  	 * console.log(isMatch('a/b')); //=> true
+  	 *
+  	 * // you can still configure the matcher function to accept windows paths
+  	 * const isMatch = picomatch('a/*', { options: windows });
+  	 * console.log(isMatch('a\\b')); //=> true
+  	 * console.log(isMatch('a/b')); //=> true
   	 * ```
   	 * @name picomatch
   	 * @param {String|Array} `globs` One or more glob patterns.
@@ -2622,9 +2970,9 @@ var drawChart = (function (exports) {
   	 * @api public
   	 */
 
-  	picomatch.matchBase = (input, glob, options) => {
+  	picomatch.matchBase = (input, glob, options, posix = options && options.windows) => {
   	  const regex = glob instanceof RegExp ? glob : picomatch.makeRe(glob, options);
-  	  return regex.test(utils.basename(input));
+  	  return regex.test(utils.basename(input, { windows: posix }));
   	};
 
   	/**
@@ -2698,6 +3046,14 @@ var drawChart = (function (exports) {
   	 * Compile a regular expression from the `state` object returned by the
   	 * [parse()](#parse) method.
   	 *
+  	 * ```js
+  	 * const picomatch = require('picomatch');
+  	 * const state = picomatch.parse('*.js');
+  	 * // picomatch.compileRe(state[, options]);
+  	 *
+  	 * console.log(picomatch.compileRe(state));
+  	 * //=> /^(?:(?!\.)(?=.)[^/]*?\.js)$/
+  	 * ```
   	 * @param {Object} `state`
   	 * @param {Object} `options`
   	 * @param {Boolean} `returnOutput` Intended for implementors, this argument allows you to return the raw output from the parser.
@@ -2733,10 +3089,10 @@ var drawChart = (function (exports) {
   	 *
   	 * ```js
   	 * const picomatch = require('picomatch');
-  	 * const state = picomatch.parse('*.js');
-  	 * // picomatch.compileRe(state[, options]);
+  	 * // picomatch.makeRe(state[, options]);
   	 *
-  	 * console.log(picomatch.compileRe(state));
+  	 * const result = picomatch.makeRe('*.js');
+  	 * console.log(result);
   	 * //=> /^(?:(?!\.)(?=.)[^/]*?\.js)$/
   	 * ```
   	 * @param {String} `state` The object returned from the `.parse` method.
@@ -2924,8 +3280,8 @@ var drawChart = (function (exports) {
       }));
   };
   const useFilter = () => {
-      const [includeFilter, setIncludeFilter] = h("");
-      const [excludeFilter, setExcludeFilter] = h("");
+      const [includeFilter, setIncludeFilter] = d("");
+      const [excludeFilter, setExcludeFilter] = d("");
       const setIncludeFilterTrottled = T(() => throttleFilter(setIncludeFilter, 200), []);
       const setExcludeFilterTrottled = T(() => throttleFilter(setExcludeFilter, 200), []);
       const isIncluded = T(() => createFilter(prepareFilter(includeFilter), prepareFilter(excludeFilter)), [includeFilter, excludeFilter]);
@@ -3211,12 +3567,12 @@ var drawChart = (function (exports) {
       // this will make groups by height
       const nestedData = T(() => {
           const nestedDataMap = group(root.descendants(), (d) => d.height);
-          const nestedData = Array.from(nestedDataMap, ([key, values]) => ({
+          const nestedDataKV = Array.from(nestedDataMap, ([key, values]) => ({
               key,
               values,
           }));
-          nestedData.sort((a, b) => b.key - a.key);
-          return nestedData;
+          nestedDataKV.sort((a, b) => b.key - a.key);
+          return nestedDataKV;
       }, [root]);
       console.timeEnd("layering");
       return (u$1("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: `0 0 ${width} ${height}`, children: nestedData.map(({ key, values }) => {
@@ -3415,7 +3771,7 @@ var drawChart = (function (exports) {
   const Tooltip = ({ node, visible, root, sizeProperty, }) => {
       const { availableSizeProperties, getModuleSize, data } = x(StaticContext);
       const ref = A(null);
-      const [style, setStyle] = h({});
+      const [style, setStyle] = d({});
       const content = T(() => {
           if (!node)
               return null;
@@ -3425,7 +3781,7 @@ var drawChart = (function (exports) {
           const percentageString = percentage + "%";
           const path = node
               .ancestors()
-              .reverse()
+              .toReversed()
               .map((d) => d.data.name)
               .join("/");
           let dataNode = null;
@@ -3433,7 +3789,7 @@ var drawChart = (function (exports) {
               const mainUid = data.nodeParts[node.data.uid].metaUid;
               dataNode = data.nodeMetas[mainUid];
           }
-          return (u$1(k$1, { children: [u$1("div", { children: path }), availableSizeProperties.map((sizeProp) => {
+          return (u$1(S, { children: [u$1("div", { children: path }), availableSizeProperties.map((sizeProp) => {
                       if (sizeProp === sizeProperty) {
                           return (u$1("div", { children: [u$1("b", { children: [LABELS[sizeProp], ": ", bytesExports.format(mainSize)] }), " ", "(", percentageString, ")"] }, sizeProp));
                       }
@@ -3443,7 +3799,7 @@ var drawChart = (function (exports) {
                   }), u$1("br", {}), dataNode && dataNode.importedBy.length > 0 && (u$1("div", { children: [u$1("div", { children: [u$1("b", { children: "Imported By" }), ":"] }), dataNode.importedBy.map(({ uid }) => {
                               const id = data.nodeMetas[uid].id;
                               return u$1("div", { children: id }, id);
-                          })] })), u$1("br", {}), u$1("small", { children: data.options.sourcemap ? SOURCEMAP_RENDERED : RENDRED }), (data.options.gzip || data.options.brotli) && (u$1(k$1, { children: [u$1("br", {}), u$1("small", { children: COMPRESSED })] }))] }));
+                          })] })), u$1("br", {}), u$1("small", { children: data.options.sourcemap ? SOURCEMAP_RENDERED : RENDRED }), (data.options.gzip || data.options.brotli) && (u$1(S, { children: [u$1("br", {}), u$1("small", { children: COMPRESSED })] }))] }));
       }, [availableSizeProperties, data, getModuleSize, node, root.data, sizeProperty]);
       const updatePosition = (mouseCoords) => {
           if (!ref.current)
@@ -3463,7 +3819,7 @@ var drawChart = (function (exports) {
           }
           setStyle(pos);
       };
-      y(() => {
+      h(() => {
           const handleMouseMove = (event) => {
               updatePosition({
                   x: event.pageX,
@@ -3479,9 +3835,9 @@ var drawChart = (function (exports) {
   };
 
   const Chart = ({ root, sizeProperty, selectedNode, setSelectedNode, }) => {
-      const [showTooltip, setShowTooltip] = h(false);
-      const [tooltipNode, setTooltipNode] = h(undefined);
-      y(() => {
+      const [showTooltip, setShowTooltip] = d(false);
+      const [tooltipNode, setTooltipNode] = d(undefined);
+      h(() => {
           const handleMouseOut = () => {
               setShowTooltip(false);
           };
@@ -3490,7 +3846,7 @@ var drawChart = (function (exports) {
               document.removeEventListener("mouseover", handleMouseOut);
           };
       }, []);
-      return (u$1(k$1, { children: [u$1(TreeMap, { root: root, onNodeHover: (node) => {
+      return (u$1(S, { children: [u$1(TreeMap, { root: root, onNodeHover: (node) => {
                       setTooltipNode(node);
                       setShowTooltip(true);
                   }, selectedNode: selectedNode, onNodeClick: (node) => {
@@ -3500,8 +3856,8 @@ var drawChart = (function (exports) {
 
   const Main = () => {
       const { availableSizeProperties, rawHierarchy, getModuleSize, layout, data } = x(StaticContext);
-      const [sizeProperty, setSizeProperty] = h(availableSizeProperties[0]);
-      const [selectedNode, setSelectedNode] = h(undefined);
+      const [sizeProperty, setSizeProperty] = d(availableSizeProperties[0]);
+      const [selectedNode, setSelectedNode] = d(undefined);
       const { getModuleFilterMultiplier, setExcludeFilter, setIncludeFilter } = useFilter();
       console.time("getNodeSizeMultiplier");
       const getNodeSizeMultiplier = T(() => {
@@ -3545,6 +3901,7 @@ var drawChart = (function (exports) {
               const filterMultiplier = getModuleFilterMultiplier(bundleId, meta);
               return ownSize * zoomMultiplier * filterMultiplier;
           })
+              // eslint-disable-next-line unicorn/no-array-sort
               .sort((a, b) => getModuleSize(a.data, sizeProperty) - getModuleSize(b.data, sizeProperty));
           return layout(rootWithSizesAndSorted);
       }, [
@@ -3557,7 +3914,7 @@ var drawChart = (function (exports) {
           sizeProperty,
       ]);
       console.timeEnd("root hierarchy compute");
-      return (u$1(k$1, { children: [u$1(SideBar, { sizeProperty: sizeProperty, availableSizeProperties: availableSizeProperties, setSizeProperty: setSizeProperty, onExcludeChange: setExcludeFilter, onIncludeChange: setIncludeFilter }), u$1(Chart, { root: root, sizeProperty: sizeProperty, selectedNode: selectedNode, setSelectedNode: setSelectedNode })] }));
+      return (u$1(S, { children: [u$1(SideBar, { sizeProperty: sizeProperty, availableSizeProperties: availableSizeProperties, setSizeProperty: setSizeProperty, onExcludeChange: setExcludeFilter, onIncludeChange: setIncludeFilter }), u$1(Chart, { root: root, sizeProperty: sizeProperty, selectedNode: selectedNode, setSelectedNode: setSelectedNode })] }));
   };
 
   function initRange(domain, range) {
@@ -4329,8 +4686,8 @@ var drawChart = (function (exports) {
   // significant digits p, where x is positive and p is in [1, 21] or undefined.
   // For example, formatDecimalParts(1.23) returns ["123", 0].
   function formatDecimalParts(x, p) {
-    if ((i = (x = p ? x.toExponential(p - 1) : x.toExponential()).indexOf("e")) < 0) return null; // NaN, ±Infinity
-    var i, coefficient = x.slice(0, i);
+    if (!isFinite(x) || x === 0) return null; // NaN, ±Infinity, ±0
+    var i = (x = p ? x.toExponential(p - 1) : x.toExponential()).indexOf("e"), coefficient = x.slice(0, i);
 
     // The string returned by toExponential either has the form \d\.\d+e[-+]\d+
     // (e.g., 1.2e+3) or the form \de[-+]\d+ (e.g., 1e+3).
@@ -4435,7 +4792,7 @@ var drawChart = (function (exports) {
 
   function formatPrefixAuto(x, p) {
     var d = formatDecimalParts(x, p);
-    if (!d) return x + "";
+    if (!d) return prefixExponent = undefined, x.toPrecision(p);
     var coefficient = d[0],
         exponent = d[1],
         i = exponent - (prefixExponent = Math.max(-8, Math.min(8, Math.floor(exponent / 3))) * 3) + 1,
@@ -4489,7 +4846,7 @@ var drawChart = (function (exports) {
         minus = locale.minus === undefined ? "−" : locale.minus + "",
         nan = locale.nan === undefined ? "NaN" : locale.nan + "";
 
-    function newFormat(specifier) {
+    function newFormat(specifier, options) {
       specifier = formatSpecifier(specifier);
 
       var fill = specifier.fill,
@@ -4514,8 +4871,8 @@ var drawChart = (function (exports) {
 
       // Compute the prefix and suffix.
       // For SI-prefix, the suffix is lazily computed.
-      var prefix = symbol === "$" ? currencyPrefix : symbol === "#" && /[boxX]/.test(type) ? "0" + type.toLowerCase() : "",
-          suffix = symbol === "$" ? currencySuffix : /[%p]/.test(type) ? percent : "";
+      var prefix = (options && options.prefix !== undefined ? options.prefix : "") + (symbol === "$" ? currencyPrefix : symbol === "#" && /[boxX]/.test(type) ? "0" + type.toLowerCase() : ""),
+          suffix = (symbol === "$" ? currencySuffix : /[%p]/.test(type) ? percent : "") + (options && options.suffix !== undefined ? options.suffix : "");
 
       // What format function should we use?
       // Is this an integer type?
@@ -4556,7 +4913,7 @@ var drawChart = (function (exports) {
 
           // Compute the prefix and suffix.
           valuePrefix = (valueNegative ? (sign === "(" ? sign : minus) : sign === "-" || sign === "(" ? "" : sign) + valuePrefix;
-          valueSuffix = (type === "s" ? prefixes[8 + prefixExponent / 3] : "") + valueSuffix + (valueNegative && sign === "(" ? ")" : "");
+          valueSuffix = (type === "s" && !isNaN(value) && prefixExponent !== undefined ? prefixes[8 + prefixExponent / 3] : "") + valueSuffix + (valueNegative && sign === "(" ? ")" : "");
 
           // Break the formatted value into the integer “value” part that can be
           // grouped, and fractional or exponential “suffix” part that is not.
@@ -4601,12 +4958,11 @@ var drawChart = (function (exports) {
     }
 
     function formatPrefix(specifier, value) {
-      var f = newFormat((specifier = formatSpecifier(specifier), specifier.type = "f", specifier)),
-          e = Math.max(-8, Math.min(8, Math.floor(exponent(value) / 3))) * 3,
+      var e = Math.max(-8, Math.min(8, Math.floor(exponent(value) / 3))) * 3,
           k = Math.pow(10, -e),
-          prefix = prefixes[8 + e / 3];
+          f = newFormat((specifier = formatSpecifier(specifier), specifier.type = "f", specifier), {suffix: prefixes[8 + e / 3]});
       return function(value) {
-        return f(k * value) + prefix;
+        return f(k * value);
       };
     }
 
@@ -4859,7 +5215,7 @@ var drawChart = (function (exports) {
       };
   };
 
-  const StaticContext = J({});
+  const StaticContext = X({});
   const drawChart = (parentNode, data, width, height) => {
       const availableSizeProperties = getAvailableSizeOptions(data.options);
       console.time("layout create");
@@ -4903,7 +5259,7 @@ var drawChart = (function (exports) {
       console.time("color");
       const getModuleColor = createRainbowColor(rawHierarchy);
       console.timeEnd("color");
-      D$1(u$1(StaticContext.Provider, { value: {
+      R(u$1(StaticContext.Provider, { value: {
               data,
               availableSizeProperties,
               width,
@@ -4929,7 +5285,7 @@ var drawChart = (function (exports) {
   </script>
   <script>
     /*<!--*/
-    const data = {"version":2,"tree":{"name":"root","children":[{"name":"index.mjs","children":[{"name":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src","children":[{"name":"modules","children":[{"uid":"4123d709-1","name":"config.js"},{"uid":"4123d709-3","name":"misc.js"},{"uid":"4123d709-5","name":"enums.js"},{"uid":"4123d709-7","name":"constants.js"},{"uid":"4123d709-9","name":"error-manager.js"},{"uid":"4123d709-11","name":"users.js"},{"uid":"4123d709-13","name":"remotecall.js"},{"name":"chat/chat-manager.js","uid":"4123d709-15"},{"uid":"4123d709-17","name":"icons.js"},{"name":"common/checkbars.js","uid":"4123d709-19"},{"name":"app","children":[{"uid":"4123d709-21","name":"gm-anarchy.js"},{"uid":"4123d709-23","name":"handle-drag.js"},{"uid":"4123d709-25","name":"gm-difficulty.js"},{"uid":"4123d709-29","name":"gm-manager.js"},{"uid":"4123d709-131","name":"gm-convergence.js"}]},{"uid":"4123d709-31","name":"attribute-actions.js"},{"uid":"4123d709-33","name":"matrix-helper.js"},{"name":"modifiers/modifiers.js","uid":"4123d709-35"},{"name":"roll","children":[{"uid":"4123d709-37","name":"dice-cursor.js"},{"uid":"4123d709-43","name":"roll-parameters.js"},{"uid":"4123d709-45","name":"roll-dialog.js"},{"uid":"4123d709-79","name":"dice.js"},{"uid":"4123d709-81","name":"anarchy-roll.js"},{"uid":"4123d709-147","name":"roll-manager.js"}]},{"name":"actor","children":[{"uid":"4123d709-39","name":"character-actor-essence.js"},{"uid":"4123d709-49","name":"actor-damage.js"},{"uid":"4123d709-51","name":"base-actor.js"},{"uid":"4123d709-57","name":"anarchy-actor-sheet.js"},{"uid":"4123d709-59","name":"character-base-sheet.js"},{"uid":"4123d709-63","name":"character-enhanced-sheet.js"},{"uid":"4123d709-87","name":"character-actor.js"},{"uid":"4123d709-89","name":"device-actor.js"},{"uid":"4123d709-91","name":"vehicle-actor.js"},{"uid":"4123d709-93","name":"character-sheet.js"},{"uid":"4123d709-95","name":"device-sheet.js"},{"uid":"4123d709-97","name":"vehicle-sheet.js"},{"uid":"4123d709-99","name":"character-npc-sheet.js"},{"uid":"4123d709-135","name":"ic-sheet.js"},{"uid":"4123d709-137","name":"sprite-sheet.js"},{"uid":"4123d709-139","name":"sprite-actor.js"},{"uid":"4123d709-141","name":"ic-actor.js"},{"uid":"4123d709-151","name":"character-tabbed-sheet.js"}]},{"uid":"4123d709-41","name":"hooks-manager.js"},{"uid":"4123d709-47","name":"skills.js"},{"uid":"4123d709-53","name":"confirmation.js"},{"name":"dialog","children":[{"uid":"4123d709-55","name":"select-actor.js"},{"uid":"4123d709-85","name":"roll-celebrity.js"}]},{"uid":"4123d709-65","name":"damage.js"},{"uid":"4123d709-67","name":"grammar.js"},{"name":"item","children":[{"uid":"4123d709-69","name":"anarchy-base-item.js"},{"uid":"4123d709-71","name":"skill-item.js"},{"uid":"4123d709-73","name":"weapon-item.js"},{"uid":"4123d709-101","name":"metatype-item.js"},{"uid":"4123d709-103","name":"cyberdeck-item.js"},{"uid":"4123d709-105","name":"base-item-sheet.js"},{"uid":"4123d709-107","name":"contact-item-sheet.js"},{"uid":"4123d709-109","name":"cyberdeck-item-sheet.js"},{"uid":"4123d709-111","name":"gear-item-sheet.js"},{"uid":"4123d709-113","name":"metatype-item-sheet.js"},{"uid":"4123d709-115","name":"quality-item-sheet.js"},{"uid":"4123d709-117","name":"shadowamp-item-sheet.js"},{"uid":"4123d709-119","name":"skill-item-sheet.js"},{"uid":"4123d709-121","name":"weapon-item-sheet.js"},{"uid":"4123d709-123","name":"contact-item.js"},{"uid":"4123d709-125","name":"gear-item.js"},{"uid":"4123d709-127","name":"quality-item.js"},{"uid":"4123d709-129","name":"shadowamp-item.js"}]},{"uid":"4123d709-75","name":"handlebars-manager.js"},{"uid":"4123d709-77","name":"styles.js"},{"uid":"4123d709-83","name":"migrations.js"},{"uid":"4123d709-133","name":"anarchy-combat.js"},{"name":"token","children":[{"uid":"4123d709-143","name":"hud-shortcuts.js"},{"uid":"4123d709-145","name":"tokens.js"}]},{"name":"combat/combat-manager.js","uid":"4123d709-149"},{"uid":"4123d709-153","name":"anarchy-system.js"}]},{"name":"styles","children":[{"uid":"4123d709-27","name":"gm-manager.scss"},{"uid":"4123d709-61","name":"character-enhanced-sheet.scss"},{"uid":"4123d709-155","name":"global.scss"}]},{"uid":"4123d709-157","name":"start.js"}]}]}],"isRoot":true},"nodeParts":{"4123d709-1":{"renderedLength":23123,"gzipLength":3996,"brotliLength":0,"metaUid":"4123d709-0"},"4123d709-3":{"renderedLength":2604,"gzipLength":786,"brotliLength":0,"metaUid":"4123d709-2"},"4123d709-5":{"renderedLength":3260,"gzipLength":982,"brotliLength":0,"metaUid":"4123d709-4"},"4123d709-7":{"renderedLength":3482,"gzipLength":1243,"brotliLength":0,"metaUid":"4123d709-6"},"4123d709-9":{"renderedLength":3089,"gzipLength":726,"brotliLength":0,"metaUid":"4123d709-8"},"4123d709-11":{"renderedLength":1760,"gzipLength":727,"brotliLength":0,"metaUid":"4123d709-10"},"4123d709-13":{"renderedLength":1920,"gzipLength":670,"brotliLength":0,"metaUid":"4123d709-12"},"4123d709-15":{"renderedLength":5955,"gzipLength":1615,"brotliLength":0,"metaUid":"4123d709-14"},"4123d709-17":{"renderedLength":764,"gzipLength":372,"brotliLength":0,"metaUid":"4123d709-16"},"4123d709-19":{"renderedLength":12904,"gzipLength":2368,"brotliLength":0,"metaUid":"4123d709-18"},"4123d709-21":{"renderedLength":3145,"gzipLength":1109,"brotliLength":0,"metaUid":"4123d709-20"},"4123d709-23":{"renderedLength":4101,"gzipLength":1158,"brotliLength":0,"metaUid":"4123d709-22"},"4123d709-25":{"renderedLength":2523,"gzipLength":937,"brotliLength":0,"metaUid":"4123d709-24"},"4123d709-27":{"renderedLength":0,"gzipLength":0,"brotliLength":0,"metaUid":"4123d709-26"},"4123d709-29":{"renderedLength":4877,"gzipLength":1638,"brotliLength":0,"metaUid":"4123d709-28"},"4123d709-31":{"renderedLength":5106,"gzipLength":1319,"brotliLength":0,"metaUid":"4123d709-30"},"4123d709-33":{"renderedLength":979,"gzipLength":299,"brotliLength":0,"metaUid":"4123d709-32"},"4123d709-35":{"renderedLength":6717,"gzipLength":1650,"brotliLength":0,"metaUid":"4123d709-34"},"4123d709-37":{"renderedLength":2190,"gzipLength":737,"brotliLength":0,"metaUid":"4123d709-36"},"4123d709-39":{"renderedLength":182,"gzipLength":147,"brotliLength":0,"metaUid":"4123d709-38"},"4123d709-41":{"renderedLength":4620,"gzipLength":1437,"brotliLength":0,"metaUid":"4123d709-40"},"4123d709-43":{"renderedLength":17262,"gzipLength":3013,"brotliLength":0,"metaUid":"4123d709-42"},"4123d709-45":{"renderedLength":8680,"gzipLength":2014,"brotliLength":0,"metaUid":"4123d709-44"},"4123d709-47":{"renderedLength":7453,"gzipLength":1936,"brotliLength":0,"metaUid":"4123d709-46"},"4123d709-49":{"renderedLength":7764,"gzipLength":1542,"brotliLength":0,"metaUid":"4123d709-48"},"4123d709-51":{"renderedLength":16940,"gzipLength":4146,"brotliLength":0,"metaUid":"4123d709-50"},"4123d709-53":{"renderedLength":2561,"gzipLength":504,"brotliLength":0,"metaUid":"4123d709-52"},"4123d709-55":{"renderedLength":1474,"gzipLength":626,"brotliLength":0,"metaUid":"4123d709-54"},"4123d709-57":{"renderedLength":8268,"gzipLength":2061,"brotliLength":0,"metaUid":"4123d709-56"},"4123d709-59":{"renderedLength":2654,"gzipLength":836,"brotliLength":0,"metaUid":"4123d709-58"},"4123d709-61":{"renderedLength":0,"gzipLength":0,"brotliLength":0,"metaUid":"4123d709-60"},"4123d709-63":{"renderedLength":1200,"gzipLength":501,"brotliLength":0,"metaUid":"4123d709-62"},"4123d709-65":{"renderedLength":254,"gzipLength":144,"brotliLength":0,"metaUid":"4123d709-64"},"4123d709-67":{"renderedLength":272,"gzipLength":155,"brotliLength":0,"metaUid":"4123d709-66"},"4123d709-69":{"renderedLength":4167,"gzipLength":1254,"brotliLength":0,"metaUid":"4123d709-68"},"4123d709-71":{"renderedLength":1251,"gzipLength":490,"brotliLength":0,"metaUid":"4123d709-70"},"4123d709-73":{"renderedLength":6986,"gzipLength":2097,"brotliLength":0,"metaUid":"4123d709-72"},"4123d709-75":{"renderedLength":11749,"gzipLength":1936,"brotliLength":0,"metaUid":"4123d709-74"},"4123d709-77":{"renderedLength":1376,"gzipLength":583,"brotliLength":0,"metaUid":"4123d709-76"},"4123d709-79":{"renderedLength":4320,"gzipLength":1230,"brotliLength":0,"metaUid":"4123d709-78"},"4123d709-81":{"renderedLength":5053,"gzipLength":1377,"brotliLength":0,"metaUid":"4123d709-80"},"4123d709-83":{"renderedLength":12749,"gzipLength":3183,"brotliLength":0,"metaUid":"4123d709-82"},"4123d709-85":{"renderedLength":3204,"gzipLength":1032,"brotliLength":0,"metaUid":"4123d709-84"},"4123d709-87":{"renderedLength":9790,"gzipLength":2633,"brotliLength":0,"metaUid":"4123d709-86"},"4123d709-89":{"renderedLength":636,"gzipLength":323,"brotliLength":0,"metaUid":"4123d709-88"},"4123d709-91":{"renderedLength":2611,"gzipLength":986,"brotliLength":0,"metaUid":"4123d709-90"},"4123d709-93":{"renderedLength":309,"gzipLength":222,"brotliLength":0,"metaUid":"4123d709-92"},"4123d709-95":{"renderedLength":421,"gzipLength":235,"brotliLength":0,"metaUid":"4123d709-94"},"4123d709-97":{"renderedLength":422,"gzipLength":235,"brotliLength":0,"metaUid":"4123d709-96"},"4123d709-99":{"renderedLength":437,"gzipLength":270,"brotliLength":0,"metaUid":"4123d709-98"},"4123d709-101":{"renderedLength":220,"gzipLength":185,"brotliLength":0,"metaUid":"4123d709-100"},"4123d709-103":{"renderedLength":1022,"gzipLength":420,"brotliLength":0,"metaUid":"4123d709-102"},"4123d709-105":{"renderedLength":3721,"gzipLength":1160,"brotliLength":0,"metaUid":"4123d709-104"},"4123d709-107":{"renderedLength":226,"gzipLength":152,"brotliLength":0,"metaUid":"4123d709-106"},"4123d709-109":{"renderedLength":355,"gzipLength":218,"brotliLength":0,"metaUid":"4123d709-108"},"4123d709-111":{"renderedLength":223,"gzipLength":150,"brotliLength":0,"metaUid":"4123d709-110"},"4123d709-113":{"renderedLength":227,"gzipLength":151,"brotliLength":0,"metaUid":"4123d709-112"},"4123d709-115":{"renderedLength":226,"gzipLength":153,"brotliLength":0,"metaUid":"4123d709-114"},"4123d709-117":{"renderedLength":228,"gzipLength":154,"brotliLength":0,"metaUid":"4123d709-116"},"4123d709-119":{"renderedLength":376,"gzipLength":230,"brotliLength":0,"metaUid":"4123d709-118"},"4123d709-121":{"renderedLength":745,"gzipLength":389,"brotliLength":0,"metaUid":"4123d709-120"},"4123d709-123":{"renderedLength":135,"gzipLength":135,"brotliLength":0,"metaUid":"4123d709-122"},"4123d709-125":{"renderedLength":125,"gzipLength":132,"brotliLength":0,"metaUid":"4123d709-124"},"4123d709-127":{"renderedLength":137,"gzipLength":142,"brotliLength":0,"metaUid":"4123d709-126"},"4123d709-129":{"renderedLength":137,"gzipLength":141,"brotliLength":0,"metaUid":"4123d709-128"},"4123d709-131":{"renderedLength":4308,"gzipLength":1360,"brotliLength":0,"metaUid":"4123d709-130"},"4123d709-133":{"renderedLength":1664,"gzipLength":546,"brotliLength":0,"metaUid":"4123d709-132"},"4123d709-135":{"renderedLength":417,"gzipLength":234,"brotliLength":0,"metaUid":"4123d709-134"},"4123d709-137":{"renderedLength":426,"gzipLength":236,"brotliLength":0,"metaUid":"4123d709-136"},"4123d709-139":{"renderedLength":653,"gzipLength":332,"brotliLength":0,"metaUid":"4123d709-138"},"4123d709-141":{"renderedLength":657,"gzipLength":339,"brotliLength":0,"metaUid":"4123d709-140"},"4123d709-143":{"renderedLength":2373,"gzipLength":854,"brotliLength":0,"metaUid":"4123d709-142"},"4123d709-145":{"renderedLength":472,"gzipLength":217,"brotliLength":0,"metaUid":"4123d709-144"},"4123d709-147":{"renderedLength":5281,"gzipLength":1489,"brotliLength":0,"metaUid":"4123d709-146"},"4123d709-149":{"renderedLength":5209,"gzipLength":1462,"brotliLength":0,"metaUid":"4123d709-148"},"4123d709-151":{"renderedLength":567,"gzipLength":339,"brotliLength":0,"metaUid":"4123d709-150"},"4123d709-153":{"renderedLength":5539,"gzipLength":1215,"brotliLength":0,"metaUid":"4123d709-152"},"4123d709-155":{"renderedLength":0,"gzipLength":0,"brotliLength":0,"metaUid":"4123d709-154"},"4123d709-157":{"renderedLength":22,"gzipLength":42,"brotliLength":0,"metaUid":"4123d709-156"}},"nodeMetas":{"4123d709-0":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/config.js","moduleParts":{"index.mjs":"4123d709-1"},"imported":[],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-4"},{"uid":"4123d709-14"},{"uid":"4123d709-20"},{"uid":"4123d709-28"},{"uid":"4123d709-76"},{"uid":"4123d709-10"},{"uid":"4123d709-40"},{"uid":"4123d709-78"},{"uid":"4123d709-80"},{"uid":"4123d709-46"},{"uid":"4123d709-50"},{"uid":"4123d709-86"},{"uid":"4123d709-90"},{"uid":"4123d709-72"},{"uid":"4123d709-18"},{"uid":"4123d709-42"},{"uid":"4123d709-44"},{"uid":"4123d709-130"},{"uid":"4123d709-142"},{"uid":"4123d709-148"},{"uid":"4123d709-146"},{"uid":"4123d709-34"},{"uid":"4123d709-48"},{"uid":"4123d709-30"},{"uid":"4123d709-8"},{"uid":"4123d709-24"},{"uid":"4123d709-84"},{"uid":"4123d709-58"},{"uid":"4123d709-56"},{"uid":"4123d709-104"},{"uid":"4123d709-52"},{"uid":"4123d709-54"}]},"4123d709-2":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/misc.js","moduleParts":{"index.mjs":"4123d709-3"},"imported":[],"importedBy":[{"uid":"4123d709-4"},{"uid":"4123d709-74"},{"uid":"4123d709-10"},{"uid":"4123d709-82"},{"uid":"4123d709-46"},{"uid":"4123d709-68"},{"uid":"4123d709-50"},{"uid":"4123d709-86"},{"uid":"4123d709-72"},{"uid":"4123d709-42"},{"uid":"4123d709-44"},{"uid":"4123d709-132"},{"uid":"4123d709-142"},{"uid":"4123d709-146"},{"uid":"4123d709-34"},{"uid":"4123d709-36"},{"uid":"4123d709-84"},{"uid":"4123d709-56"}]},"4123d709-4":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/enums.js","moduleParts":{"index.mjs":"4123d709-5"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-2"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-74"},{"uid":"4123d709-50"},{"uid":"4123d709-72"},{"uid":"4123d709-42"},{"uid":"4123d709-44"},{"uid":"4123d709-146"},{"uid":"4123d709-34"},{"uid":"4123d709-64"},{"uid":"4123d709-56"},{"uid":"4123d709-104"}]},"4123d709-6":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/constants.js","moduleParts":{"index.mjs":"4123d709-7"},"imported":[],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-14"},{"uid":"4123d709-20"},{"uid":"4123d709-28"},{"uid":"4123d709-12"},{"uid":"4123d709-76"},{"uid":"4123d709-40"},{"uid":"4123d709-78"},{"uid":"4123d709-82"},{"uid":"4123d709-46"},{"uid":"4123d709-68"},{"uid":"4123d709-50"},{"uid":"4123d709-86"},{"uid":"4123d709-88"},{"uid":"4123d709-90"},{"uid":"4123d709-92"},{"uid":"4123d709-98"},{"uid":"4123d709-70"},{"uid":"4123d709-100"},{"uid":"4123d709-102"},{"uid":"4123d709-72"},{"uid":"4123d709-122"},{"uid":"4123d709-124"},{"uid":"4123d709-126"},{"uid":"4123d709-128"},{"uid":"4123d709-18"},{"uid":"4123d709-42"},{"uid":"4123d709-44"},{"uid":"4123d709-130"},{"uid":"4123d709-138"},{"uid":"4123d709-140"},{"uid":"4123d709-142"},{"uid":"4123d709-148"},{"uid":"4123d709-146"},{"uid":"4123d709-150"},{"uid":"4123d709-62"},{"uid":"4123d709-34"},{"uid":"4123d709-48"},{"uid":"4123d709-30"},{"uid":"4123d709-24"},{"uid":"4123d709-16"},{"uid":"4123d709-84"},{"uid":"4123d709-58"},{"uid":"4123d709-56"},{"uid":"4123d709-104"},{"uid":"4123d709-54"}]},"4123d709-8":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/error-manager.js","moduleParts":{"index.mjs":"4123d709-9"},"imported":[{"uid":"4123d709-0"}],"importedBy":[{"uid":"4123d709-20"},{"uid":"4123d709-10"},{"uid":"4123d709-50"},{"uid":"4123d709-86"},{"uid":"4123d709-90"},{"uid":"4123d709-72"},{"uid":"4123d709-18"},{"uid":"4123d709-48"},{"uid":"4123d709-30"}]},"4123d709-10":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/users.js","moduleParts":{"index.mjs":"4123d709-11"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-8"},{"uid":"4123d709-2"},{"uid":"4123d709-12"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-12"},{"uid":"4123d709-50"},{"uid":"4123d709-90"},{"uid":"4123d709-72"},{"uid":"4123d709-18"},{"uid":"4123d709-132"}]},"4123d709-12":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/remotecall.js","moduleParts":{"index.mjs":"4123d709-13"},"imported":[{"uid":"4123d709-6"},{"uid":"4123d709-10"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-14"},{"uid":"4123d709-20"},{"uid":"4123d709-10"},{"uid":"4123d709-130"}]},"4123d709-14":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/chat/chat-manager.js","moduleParts":{"index.mjs":"4123d709-15"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-12"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-148"},{"uid":"4123d709-146"}]},"4123d709-16":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/icons.js","moduleParts":{"index.mjs":"4123d709-17"},"imported":[{"uid":"4123d709-6"}],"importedBy":[{"uid":"4123d709-74"},{"uid":"4123d709-18"},{"uid":"4123d709-30"},{"uid":"4123d709-52"},{"uid":"4123d709-54"}]},"4123d709-18":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/common/checkbars.js","moduleParts":{"index.mjs":"4123d709-19"},"imported":[{"uid":"4123d709-8"},{"uid":"4123d709-0"},{"uid":"4123d709-10"},{"uid":"4123d709-16"},{"uid":"4123d709-6"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-20"},{"uid":"4123d709-40"},{"uid":"4123d709-68"},{"uid":"4123d709-50"},{"uid":"4123d709-86"},{"uid":"4123d709-72"},{"uid":"4123d709-130"},{"uid":"4123d709-48"}]},"4123d709-20":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/app/gm-anarchy.js","moduleParts":{"index.mjs":"4123d709-21"},"imported":[{"uid":"4123d709-18"},{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-8"},{"uid":"4123d709-12"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-22":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/app/handle-drag.js","moduleParts":{"index.mjs":"4123d709-23"},"imported":[],"importedBy":[{"uid":"4123d709-28"}]},"4123d709-24":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/app/gm-difficulty.js","moduleParts":{"index.mjs":"4123d709-25"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-6"}],"importedBy":[{"uid":"4123d709-28"}]},"4123d709-26":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/styles/gm-manager.scss","moduleParts":{"index.mjs":"4123d709-27"},"imported":[],"importedBy":[{"uid":"4123d709-28"}]},"4123d709-28":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/app/gm-manager.js","moduleParts":{"index.mjs":"4123d709-29"},"imported":[{"uid":"4123d709-22"},{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-24"},{"uid":"4123d709-26"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-30":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/attribute-actions.js","moduleParts":{"index.mjs":"4123d709-31"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-8"},{"uid":"4123d709-16"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-82"},{"uid":"4123d709-50"},{"uid":"4123d709-72"},{"uid":"4123d709-120"},{"uid":"4123d709-34"}]},"4123d709-32":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/matrix-helper.js","moduleParts":{"index.mjs":"4123d709-33"},"imported":[],"importedBy":[{"uid":"4123d709-68"},{"uid":"4123d709-50"},{"uid":"4123d709-86"},{"uid":"4123d709-102"},{"uid":"4123d709-42"}]},"4123d709-34":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/modifiers/modifiers.js","moduleParts":{"index.mjs":"4123d709-35"},"imported":[{"uid":"4123d709-30"},{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-4"},{"uid":"4123d709-2"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-50"},{"uid":"4123d709-86"},{"uid":"4123d709-42"},{"uid":"4123d709-48"},{"uid":"4123d709-84"}]},"4123d709-36":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/roll/dice-cursor.js","moduleParts":{"index.mjs":"4123d709-37"},"imported":[{"uid":"4123d709-2"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-44"}]},"4123d709-38":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/character-actor-essence.js","moduleParts":{"index.mjs":"4123d709-39"},"imported":[],"importedBy":[{"uid":"4123d709-40"}]},"4123d709-40":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/hooks-manager.js","moduleParts":{"index.mjs":"4123d709-41"},"imported":[{"uid":"4123d709-38"},{"uid":"4123d709-18"},{"uid":"4123d709-0"},{"uid":"4123d709-6"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-76"},{"uid":"4123d709-82"},{"uid":"4123d709-46"},{"uid":"4123d709-86"},{"uid":"4123d709-72"},{"uid":"4123d709-42"},{"uid":"4123d709-48"}]},"4123d709-42":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/roll/roll-parameters.js","moduleParts":{"index.mjs":"4123d709-43"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-4"},{"uid":"4123d709-40"},{"uid":"4123d709-32"},{"uid":"4123d709-2"},{"uid":"4123d709-34"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-72"},{"uid":"4123d709-44"},{"uid":"4123d709-146"}]},"4123d709-44":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/roll/roll-dialog.js","moduleParts":{"index.mjs":"4123d709-45"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-4"},{"uid":"4123d709-2"},{"uid":"4123d709-36"},{"uid":"4123d709-42"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-68"},{"uid":"4123d709-50"}]},"4123d709-46":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/skills.js","moduleParts":{"index.mjs":"4123d709-47"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-40"},{"uid":"4123d709-2"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-82"},{"uid":"4123d709-50"}]},"4123d709-48":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/actor-damage.js","moduleParts":{"index.mjs":"4123d709-49"},"imported":[{"uid":"4123d709-18"},{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-8"},{"uid":"4123d709-40"},{"uid":"4123d709-34"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-50"},{"uid":"4123d709-148"}]},"4123d709-50":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/base-actor.js","moduleParts":{"index.mjs":"4123d709-51"},"imported":[{"uid":"4123d709-30"},{"uid":"4123d709-18"},{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-4"},{"uid":"4123d709-8"},{"uid":"4123d709-32"},{"uid":"4123d709-2"},{"uid":"4123d709-34"},{"uid":"4123d709-44"},{"uid":"4123d709-46"},{"uid":"4123d709-10"},{"uid":"4123d709-48"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-74"},{"uid":"4123d709-86"},{"uid":"4123d709-88"},{"uid":"4123d709-90"},{"uid":"4123d709-138"},{"uid":"4123d709-140"}]},"4123d709-52":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/confirmation.js","moduleParts":{"index.mjs":"4123d709-53"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-16"}],"importedBy":[{"uid":"4123d709-56"}]},"4123d709-54":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/dialog/select-actor.js","moduleParts":{"index.mjs":"4123d709-55"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-16"}],"importedBy":[{"uid":"4123d709-56"}]},"4123d709-56":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/anarchy-actor-sheet.js","moduleParts":{"index.mjs":"4123d709-57"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-52"},{"uid":"4123d709-2"},{"uid":"4123d709-4"},{"uid":"4123d709-54"}],"importedBy":[{"uid":"4123d709-94"},{"uid":"4123d709-96"},{"uid":"4123d709-134"},{"uid":"4123d709-136"},{"uid":"4123d709-58"}]},"4123d709-58":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/character-base-sheet.js","moduleParts":{"index.mjs":"4123d709-59"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-56"},{"uid":"4123d709-6"}],"importedBy":[{"uid":"4123d709-92"},{"uid":"4123d709-98"},{"uid":"4123d709-150"},{"uid":"4123d709-62"}]},"4123d709-60":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/styles/character-enhanced-sheet.scss","moduleParts":{"index.mjs":"4123d709-61"},"imported":[],"importedBy":[{"uid":"4123d709-62"}]},"4123d709-62":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/character-enhanced-sheet.js","moduleParts":{"index.mjs":"4123d709-63"},"imported":[{"uid":"4123d709-6"},{"uid":"4123d709-58"},{"uid":"4123d709-60"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-74"}]},"4123d709-64":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/damage.js","moduleParts":{"index.mjs":"4123d709-65"},"imported":[{"uid":"4123d709-4"}],"importedBy":[{"uid":"4123d709-74"}]},"4123d709-66":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/grammar.js","moduleParts":{"index.mjs":"4123d709-67"},"imported":[],"importedBy":[{"uid":"4123d709-74"}]},"4123d709-68":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/anarchy-base-item.js","moduleParts":{"index.mjs":"4123d709-69"},"imported":[{"uid":"4123d709-18"},{"uid":"4123d709-2"},{"uid":"4123d709-6"},{"uid":"4123d709-44"},{"uid":"4123d709-32"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-70"},{"uid":"4123d709-100"},{"uid":"4123d709-102"},{"uid":"4123d709-72"},{"uid":"4123d709-122"},{"uid":"4123d709-124"},{"uid":"4123d709-126"},{"uid":"4123d709-128"}]},"4123d709-70":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/skill-item.js","moduleParts":{"index.mjs":"4123d709-71"},"imported":[{"uid":"4123d709-6"},{"uid":"4123d709-68"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-72"},{"uid":"4123d709-118"}]},"4123d709-72":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/weapon-item.js","moduleParts":{"index.mjs":"4123d709-73"},"imported":[{"uid":"4123d709-6"},{"uid":"4123d709-0"},{"uid":"4123d709-4"},{"uid":"4123d709-68"},{"uid":"4123d709-18"},{"uid":"4123d709-10"},{"uid":"4123d709-42"},{"uid":"4123d709-40"},{"uid":"4123d709-30"},{"uid":"4123d709-8"},{"uid":"4123d709-2"},{"uid":"4123d709-70"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-74"}]},"4123d709-74":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/handlebars-manager.js","moduleParts":{"index.mjs":"4123d709-75"},"imported":[{"uid":"4123d709-50"},{"uid":"4123d709-62"},{"uid":"4123d709-64"},{"uid":"4123d709-4"},{"uid":"4123d709-66"},{"uid":"4123d709-16"},{"uid":"4123d709-72"},{"uid":"4123d709-2"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-76":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/styles.js","moduleParts":{"index.mjs":"4123d709-77"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-40"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-78":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/roll/dice.js","moduleParts":{"index.mjs":"4123d709-79"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-6"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-80"}]},"4123d709-80":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/roll/anarchy-roll.js","moduleParts":{"index.mjs":"4123d709-81"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-78"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-146"}]},"4123d709-82":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/migrations.js","moduleParts":{"index.mjs":"4123d709-83"},"imported":[{"uid":"4123d709-6"},{"uid":"4123d709-46"},{"uid":"4123d709-40"},{"uid":"4123d709-2"},{"uid":"4123d709-30"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-84":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/dialog/roll-celebrity.js","moduleParts":{"index.mjs":"4123d709-85"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-2"},{"uid":"4123d709-34"}],"importedBy":[{"uid":"4123d709-86"}]},"4123d709-86":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/character-actor.js","moduleParts":{"index.mjs":"4123d709-87"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-50"},{"uid":"4123d709-8"},{"uid":"4123d709-2"},{"uid":"4123d709-34"},{"uid":"4123d709-18"},{"uid":"4123d709-84"},{"uid":"4123d709-40"},{"uid":"4123d709-32"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-88":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/device-actor.js","moduleParts":{"index.mjs":"4123d709-89"},"imported":[{"uid":"4123d709-6"},{"uid":"4123d709-50"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-90":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/vehicle-actor.js","moduleParts":{"index.mjs":"4123d709-91"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-8"},{"uid":"4123d709-10"},{"uid":"4123d709-50"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-92":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/character-sheet.js","moduleParts":{"index.mjs":"4123d709-93"},"imported":[{"uid":"4123d709-6"},{"uid":"4123d709-58"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-94":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/device-sheet.js","moduleParts":{"index.mjs":"4123d709-95"},"imported":[{"uid":"4123d709-56"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-96":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/vehicle-sheet.js","moduleParts":{"index.mjs":"4123d709-97"},"imported":[{"uid":"4123d709-56"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-98":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/character-npc-sheet.js","moduleParts":{"index.mjs":"4123d709-99"},"imported":[{"uid":"4123d709-6"},{"uid":"4123d709-58"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-100":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/metatype-item.js","moduleParts":{"index.mjs":"4123d709-101"},"imported":[{"uid":"4123d709-6"},{"uid":"4123d709-68"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-102":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/cyberdeck-item.js","moduleParts":{"index.mjs":"4123d709-103"},"imported":[{"uid":"4123d709-6"},{"uid":"4123d709-32"},{"uid":"4123d709-68"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-104":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/base-item-sheet.js","moduleParts":{"index.mjs":"4123d709-105"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-4"}],"importedBy":[{"uid":"4123d709-106"},{"uid":"4123d709-108"},{"uid":"4123d709-110"},{"uid":"4123d709-112"},{"uid":"4123d709-114"},{"uid":"4123d709-116"},{"uid":"4123d709-118"},{"uid":"4123d709-120"}]},"4123d709-106":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/contact-item-sheet.js","moduleParts":{"index.mjs":"4123d709-107"},"imported":[{"uid":"4123d709-104"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-108":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/cyberdeck-item-sheet.js","moduleParts":{"index.mjs":"4123d709-109"},"imported":[{"uid":"4123d709-104"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-110":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/gear-item-sheet.js","moduleParts":{"index.mjs":"4123d709-111"},"imported":[{"uid":"4123d709-104"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-112":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/metatype-item-sheet.js","moduleParts":{"index.mjs":"4123d709-113"},"imported":[{"uid":"4123d709-104"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-114":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/quality-item-sheet.js","moduleParts":{"index.mjs":"4123d709-115"},"imported":[{"uid":"4123d709-104"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-116":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/shadowamp-item-sheet.js","moduleParts":{"index.mjs":"4123d709-117"},"imported":[{"uid":"4123d709-104"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-118":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/skill-item-sheet.js","moduleParts":{"index.mjs":"4123d709-119"},"imported":[{"uid":"4123d709-104"},{"uid":"4123d709-70"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-120":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/weapon-item-sheet.js","moduleParts":{"index.mjs":"4123d709-121"},"imported":[{"uid":"4123d709-30"},{"uid":"4123d709-104"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-122":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/contact-item.js","moduleParts":{"index.mjs":"4123d709-123"},"imported":[{"uid":"4123d709-6"},{"uid":"4123d709-68"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-124":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/gear-item.js","moduleParts":{"index.mjs":"4123d709-125"},"imported":[{"uid":"4123d709-6"},{"uid":"4123d709-68"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-126":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/quality-item.js","moduleParts":{"index.mjs":"4123d709-127"},"imported":[{"uid":"4123d709-6"},{"uid":"4123d709-68"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-128":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/shadowamp-item.js","moduleParts":{"index.mjs":"4123d709-129"},"imported":[{"uid":"4123d709-6"},{"uid":"4123d709-68"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-130":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/app/gm-convergence.js","moduleParts":{"index.mjs":"4123d709-131"},"imported":[{"uid":"4123d709-18"},{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-12"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-132":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/anarchy-combat.js","moduleParts":{"index.mjs":"4123d709-133"},"imported":[{"uid":"4123d709-2"},{"uid":"4123d709-10"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-134":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/ic-sheet.js","moduleParts":{"index.mjs":"4123d709-135"},"imported":[{"uid":"4123d709-56"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-136":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/sprite-sheet.js","moduleParts":{"index.mjs":"4123d709-137"},"imported":[{"uid":"4123d709-56"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-138":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/sprite-actor.js","moduleParts":{"index.mjs":"4123d709-139"},"imported":[{"uid":"4123d709-6"},{"uid":"4123d709-50"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-140":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/ic-actor.js","moduleParts":{"index.mjs":"4123d709-141"},"imported":[{"uid":"4123d709-6"},{"uid":"4123d709-50"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-142":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/token/hud-shortcuts.js","moduleParts":{"index.mjs":"4123d709-143"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-2"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-144":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/token/tokens.js","moduleParts":{"index.mjs":"4123d709-145"},"imported":[],"importedBy":[{"uid":"4123d709-146"}]},"4123d709-146":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/roll/roll-manager.js","moduleParts":{"index.mjs":"4123d709-147"},"imported":[{"uid":"4123d709-14"},{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-4"},{"uid":"4123d709-2"},{"uid":"4123d709-144"},{"uid":"4123d709-80"},{"uid":"4123d709-42"}],"importedBy":[{"uid":"4123d709-152"},{"uid":"4123d709-148"}]},"4123d709-148":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/combat/combat-manager.js","moduleParts":{"index.mjs":"4123d709-149"},"imported":[{"uid":"4123d709-48"},{"uid":"4123d709-14"},{"uid":"4123d709-0"},{"uid":"4123d709-6"},{"uid":"4123d709-146"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-150":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/character-tabbed-sheet.js","moduleParts":{"index.mjs":"4123d709-151"},"imported":[{"uid":"4123d709-6"},{"uid":"4123d709-58"}],"importedBy":[{"uid":"4123d709-152"}]},"4123d709-152":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/anarchy-system.js","moduleParts":{"index.mjs":"4123d709-153"},"imported":[{"uid":"4123d709-0"},{"uid":"4123d709-4"},{"uid":"4123d709-6"},{"uid":"4123d709-14"},{"uid":"4123d709-20"},{"uid":"4123d709-28"},{"uid":"4123d709-74"},{"uid":"4123d709-12"},{"uid":"4123d709-76"},{"uid":"4123d709-10"},{"uid":"4123d709-40"},{"uid":"4123d709-78"},{"uid":"4123d709-80"},{"uid":"4123d709-82"},{"uid":"4123d709-46"},{"uid":"4123d709-68"},{"uid":"4123d709-50"},{"uid":"4123d709-86"},{"uid":"4123d709-88"},{"uid":"4123d709-90"},{"uid":"4123d709-92"},{"uid":"4123d709-94"},{"uid":"4123d709-96"},{"uid":"4123d709-98"},{"uid":"4123d709-70"},{"uid":"4123d709-100"},{"uid":"4123d709-102"},{"uid":"4123d709-72"},{"uid":"4123d709-106"},{"uid":"4123d709-108"},{"uid":"4123d709-110"},{"uid":"4123d709-112"},{"uid":"4123d709-114"},{"uid":"4123d709-116"},{"uid":"4123d709-118"},{"uid":"4123d709-120"},{"uid":"4123d709-122"},{"uid":"4123d709-124"},{"uid":"4123d709-126"},{"uid":"4123d709-128"},{"uid":"4123d709-18"},{"uid":"4123d709-42"},{"uid":"4123d709-44"},{"uid":"4123d709-130"},{"uid":"4123d709-132"},{"uid":"4123d709-134"},{"uid":"4123d709-136"},{"uid":"4123d709-138"},{"uid":"4123d709-140"},{"uid":"4123d709-142"},{"uid":"4123d709-148"},{"uid":"4123d709-146"},{"uid":"4123d709-150"},{"uid":"4123d709-62"},{"uid":"4123d709-34"},{"uid":"4123d709-48"},{"uid":"4123d709-30"},{"uid":"4123d709-36"}],"importedBy":[{"uid":"4123d709-156"}]},"4123d709-154":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/styles/global.scss","moduleParts":{"index.mjs":"4123d709-155"},"imported":[],"importedBy":[{"uid":"4123d709-156"}]},"4123d709-156":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/start.js","moduleParts":{"index.mjs":"4123d709-157"},"imported":[{"uid":"4123d709-152"},{"uid":"4123d709-154"}],"importedBy":[],"isEntry":true}},"env":{"rollup":"4.62.0"},"options":{"gzip":true,"brotli":false,"sourcemap":false}};
+    const data = {"version":2,"tree":{"name":"root","children":[{"name":"index.mjs","children":[{"name":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src","children":[{"name":"modules","children":[{"uid":"eac6e50e-1","name":"config.js"},{"uid":"eac6e50e-3","name":"misc.js"},{"uid":"eac6e50e-5","name":"enums.js"},{"uid":"eac6e50e-7","name":"constants.js"},{"uid":"eac6e50e-9","name":"error-manager.js"},{"uid":"eac6e50e-11","name":"users.js"},{"uid":"eac6e50e-13","name":"remotecall.js"},{"name":"chat/chat-manager.js","uid":"eac6e50e-15"},{"uid":"eac6e50e-17","name":"icons.js"},{"name":"common/checkbars.js","uid":"eac6e50e-19"},{"name":"app","children":[{"uid":"eac6e50e-21","name":"gm-anarchy.js"},{"uid":"eac6e50e-23","name":"handle-drag.js"},{"uid":"eac6e50e-25","name":"gm-difficulty.js"},{"uid":"eac6e50e-29","name":"gm-manager.js"},{"uid":"eac6e50e-131","name":"gm-convergence.js"}]},{"uid":"eac6e50e-31","name":"attribute-actions.js"},{"uid":"eac6e50e-33","name":"matrix-helper.js"},{"name":"modifiers/modifiers.js","uid":"eac6e50e-35"},{"name":"roll","children":[{"uid":"eac6e50e-37","name":"dice-cursor.js"},{"uid":"eac6e50e-43","name":"roll-parameters.js"},{"uid":"eac6e50e-45","name":"roll-dialog.js"},{"uid":"eac6e50e-79","name":"dice.js"},{"uid":"eac6e50e-81","name":"anarchy-roll.js"},{"uid":"eac6e50e-147","name":"roll-manager.js"}]},{"name":"actor","children":[{"uid":"eac6e50e-39","name":"character-actor-essence.js"},{"uid":"eac6e50e-49","name":"actor-damage.js"},{"uid":"eac6e50e-51","name":"base-actor.js"},{"uid":"eac6e50e-57","name":"anarchy-actor-sheet.js"},{"uid":"eac6e50e-59","name":"character-base-sheet.js"},{"uid":"eac6e50e-63","name":"character-enhanced-sheet.js"},{"uid":"eac6e50e-87","name":"character-actor.js"},{"uid":"eac6e50e-89","name":"device-actor.js"},{"uid":"eac6e50e-91","name":"vehicle-actor.js"},{"uid":"eac6e50e-93","name":"character-sheet.js"},{"uid":"eac6e50e-95","name":"device-sheet.js"},{"uid":"eac6e50e-97","name":"vehicle-sheet.js"},{"uid":"eac6e50e-99","name":"character-npc-sheet.js"},{"uid":"eac6e50e-135","name":"ic-sheet.js"},{"uid":"eac6e50e-137","name":"sprite-sheet.js"},{"uid":"eac6e50e-139","name":"sprite-actor.js"},{"uid":"eac6e50e-141","name":"ic-actor.js"},{"uid":"eac6e50e-151","name":"character-tabbed-sheet.js"}]},{"uid":"eac6e50e-41","name":"hooks-manager.js"},{"uid":"eac6e50e-47","name":"skills.js"},{"uid":"eac6e50e-53","name":"confirmation.js"},{"name":"dialog","children":[{"uid":"eac6e50e-55","name":"select-actor.js"},{"uid":"eac6e50e-85","name":"roll-celebrity.js"}]},{"uid":"eac6e50e-65","name":"damage.js"},{"uid":"eac6e50e-67","name":"grammar.js"},{"name":"item","children":[{"uid":"eac6e50e-69","name":"anarchy-base-item.js"},{"uid":"eac6e50e-71","name":"skill-item.js"},{"uid":"eac6e50e-73","name":"weapon-item.js"},{"uid":"eac6e50e-101","name":"metatype-item.js"},{"uid":"eac6e50e-103","name":"cyberdeck-item.js"},{"uid":"eac6e50e-105","name":"base-item-sheet.js"},{"uid":"eac6e50e-107","name":"contact-item-sheet.js"},{"uid":"eac6e50e-109","name":"cyberdeck-item-sheet.js"},{"uid":"eac6e50e-111","name":"gear-item-sheet.js"},{"uid":"eac6e50e-113","name":"metatype-item-sheet.js"},{"uid":"eac6e50e-115","name":"quality-item-sheet.js"},{"uid":"eac6e50e-117","name":"shadowamp-item-sheet.js"},{"uid":"eac6e50e-119","name":"skill-item-sheet.js"},{"uid":"eac6e50e-121","name":"weapon-item-sheet.js"},{"uid":"eac6e50e-123","name":"contact-item.js"},{"uid":"eac6e50e-125","name":"gear-item.js"},{"uid":"eac6e50e-127","name":"quality-item.js"},{"uid":"eac6e50e-129","name":"shadowamp-item.js"}]},{"uid":"eac6e50e-75","name":"handlebars-manager.js"},{"uid":"eac6e50e-77","name":"styles.js"},{"uid":"eac6e50e-83","name":"migrations.js"},{"uid":"eac6e50e-133","name":"anarchy-combat.js"},{"name":"token","children":[{"uid":"eac6e50e-143","name":"hud-shortcuts.js"},{"uid":"eac6e50e-145","name":"tokens.js"}]},{"name":"combat/combat-manager.js","uid":"eac6e50e-149"},{"uid":"eac6e50e-153","name":"anarchy-system.js"}]},{"name":"styles","children":[{"uid":"eac6e50e-27","name":"gm-manager.scss"},{"uid":"eac6e50e-61","name":"character-enhanced-sheet.scss"},{"uid":"eac6e50e-155","name":"global.scss"}]},{"uid":"eac6e50e-157","name":"start.js"}]}]}],"isRoot":true},"nodeParts":{"eac6e50e-1":{"renderedLength":18791,"gzipLength":3905,"brotliLength":0,"metaUid":"eac6e50e-0"},"eac6e50e-3":{"renderedLength":2332,"gzipLength":792,"brotliLength":0,"metaUid":"eac6e50e-2"},"eac6e50e-5":{"renderedLength":2998,"gzipLength":948,"brotliLength":0,"metaUid":"eac6e50e-4"},"eac6e50e-7":{"renderedLength":2931,"gzipLength":1118,"brotliLength":0,"metaUid":"eac6e50e-6"},"eac6e50e-9":{"renderedLength":2761,"gzipLength":736,"brotliLength":0,"metaUid":"eac6e50e-8"},"eac6e50e-11":{"renderedLength":1537,"gzipLength":662,"brotliLength":0,"metaUid":"eac6e50e-10"},"eac6e50e-13":{"renderedLength":1698,"gzipLength":654,"brotliLength":0,"metaUid":"eac6e50e-12"},"eac6e50e-15":{"renderedLength":5422,"gzipLength":1593,"brotliLength":0,"metaUid":"eac6e50e-14"},"eac6e50e-17":{"renderedLength":708,"gzipLength":371,"brotliLength":0,"metaUid":"eac6e50e-16"},"eac6e50e-19":{"renderedLength":11750,"gzipLength":2342,"brotliLength":0,"metaUid":"eac6e50e-18"},"eac6e50e-21":{"renderedLength":2865,"gzipLength":1119,"brotliLength":0,"metaUid":"eac6e50e-20"},"eac6e50e-23":{"renderedLength":3496,"gzipLength":1021,"brotliLength":0,"metaUid":"eac6e50e-22"},"eac6e50e-25":{"renderedLength":2361,"gzipLength":946,"brotliLength":0,"metaUid":"eac6e50e-24"},"eac6e50e-27":{"renderedLength":0,"gzipLength":0,"brotliLength":0,"metaUid":"eac6e50e-26"},"eac6e50e-29":{"renderedLength":4160,"gzipLength":1564,"brotliLength":0,"metaUid":"eac6e50e-28"},"eac6e50e-31":{"renderedLength":4783,"gzipLength":1272,"brotliLength":0,"metaUid":"eac6e50e-30"},"eac6e50e-33":{"renderedLength":924,"gzipLength":330,"brotliLength":0,"metaUid":"eac6e50e-32"},"eac6e50e-35":{"renderedLength":5951,"gzipLength":1521,"brotliLength":0,"metaUid":"eac6e50e-34"},"eac6e50e-37":{"renderedLength":2156,"gzipLength":764,"brotliLength":0,"metaUid":"eac6e50e-36"},"eac6e50e-39":{"renderedLength":199,"gzipLength":165,"brotliLength":0,"metaUid":"eac6e50e-38"},"eac6e50e-41":{"renderedLength":3507,"gzipLength":1202,"brotliLength":0,"metaUid":"eac6e50e-40"},"eac6e50e-43":{"renderedLength":15559,"gzipLength":2830,"brotliLength":0,"metaUid":"eac6e50e-42"},"eac6e50e-45":{"renderedLength":7770,"gzipLength":1923,"brotliLength":0,"metaUid":"eac6e50e-44"},"eac6e50e-47":{"renderedLength":7275,"gzipLength":1932,"brotliLength":0,"metaUid":"eac6e50e-46"},"eac6e50e-49":{"renderedLength":7060,"gzipLength":1531,"brotliLength":0,"metaUid":"eac6e50e-48"},"eac6e50e-51":{"renderedLength":14888,"gzipLength":3957,"brotliLength":0,"metaUid":"eac6e50e-50"},"eac6e50e-53":{"renderedLength":2224,"gzipLength":517,"brotliLength":0,"metaUid":"eac6e50e-52"},"eac6e50e-55":{"renderedLength":1336,"gzipLength":625,"brotliLength":0,"metaUid":"eac6e50e-54"},"eac6e50e-57":{"renderedLength":7267,"gzipLength":1908,"brotliLength":0,"metaUid":"eac6e50e-56"},"eac6e50e-59":{"renderedLength":2306,"gzipLength":789,"brotliLength":0,"metaUid":"eac6e50e-58"},"eac6e50e-61":{"renderedLength":0,"gzipLength":0,"brotliLength":0,"metaUid":"eac6e50e-60"},"eac6e50e-63":{"renderedLength":1063,"gzipLength":495,"brotliLength":0,"metaUid":"eac6e50e-62"},"eac6e50e-65":{"renderedLength":290,"gzipLength":173,"brotliLength":0,"metaUid":"eac6e50e-64"},"eac6e50e-67":{"renderedLength":311,"gzipLength":191,"brotliLength":0,"metaUid":"eac6e50e-66"},"eac6e50e-69":{"renderedLength":3766,"gzipLength":1256,"brotliLength":0,"metaUid":"eac6e50e-68"},"eac6e50e-71":{"renderedLength":1123,"gzipLength":502,"brotliLength":0,"metaUid":"eac6e50e-70"},"eac6e50e-73":{"renderedLength":5958,"gzipLength":1936,"brotliLength":0,"metaUid":"eac6e50e-72"},"eac6e50e-75":{"renderedLength":11455,"gzipLength":1955,"brotliLength":0,"metaUid":"eac6e50e-74"},"eac6e50e-77":{"renderedLength":1274,"gzipLength":568,"brotliLength":0,"metaUid":"eac6e50e-76"},"eac6e50e-79":{"renderedLength":3736,"gzipLength":1146,"brotliLength":0,"metaUid":"eac6e50e-78"},"eac6e50e-81":{"renderedLength":4457,"gzipLength":1287,"brotliLength":0,"metaUid":"eac6e50e-80"},"eac6e50e-83":{"renderedLength":11679,"gzipLength":3055,"brotliLength":0,"metaUid":"eac6e50e-82"},"eac6e50e-85":{"renderedLength":2180,"gzipLength":922,"brotliLength":0,"metaUid":"eac6e50e-84"},"eac6e50e-87":{"renderedLength":8493,"gzipLength":2468,"brotliLength":0,"metaUid":"eac6e50e-86"},"eac6e50e-89":{"renderedLength":628,"gzipLength":349,"brotliLength":0,"metaUid":"eac6e50e-88"},"eac6e50e-91":{"renderedLength":2397,"gzipLength":994,"brotliLength":0,"metaUid":"eac6e50e-90"},"eac6e50e-93":{"renderedLength":324,"gzipLength":243,"brotliLength":0,"metaUid":"eac6e50e-92"},"eac6e50e-95":{"renderedLength":403,"gzipLength":253,"brotliLength":0,"metaUid":"eac6e50e-94"},"eac6e50e-97":{"renderedLength":405,"gzipLength":253,"brotliLength":0,"metaUid":"eac6e50e-96"},"eac6e50e-99":{"renderedLength":464,"gzipLength":300,"brotliLength":0,"metaUid":"eac6e50e-98"},"eac6e50e-101":{"renderedLength":266,"gzipLength":220,"brotliLength":0,"metaUid":"eac6e50e-100"},"eac6e50e-103":{"renderedLength":991,"gzipLength":443,"brotliLength":0,"metaUid":"eac6e50e-102"},"eac6e50e-105":{"renderedLength":3310,"gzipLength":1131,"brotliLength":0,"metaUid":"eac6e50e-104"},"eac6e50e-107":{"renderedLength":249,"gzipLength":180,"brotliLength":0,"metaUid":"eac6e50e-106"},"eac6e50e-109":{"renderedLength":370,"gzipLength":246,"brotliLength":0,"metaUid":"eac6e50e-108"},"eac6e50e-111":{"renderedLength":243,"gzipLength":178,"brotliLength":0,"metaUid":"eac6e50e-110"},"eac6e50e-113":{"renderedLength":251,"gzipLength":180,"brotliLength":0,"metaUid":"eac6e50e-112"},"eac6e50e-115":{"renderedLength":249,"gzipLength":182,"brotliLength":0,"metaUid":"eac6e50e-114"},"eac6e50e-117":{"renderedLength":253,"gzipLength":181,"brotliLength":0,"metaUid":"eac6e50e-116"},"eac6e50e-119":{"renderedLength":396,"gzipLength":262,"brotliLength":0,"metaUid":"eac6e50e-118"},"eac6e50e-121":{"renderedLength":744,"gzipLength":419,"brotliLength":0,"metaUid":"eac6e50e-120"},"eac6e50e-123":{"renderedLength":187,"gzipLength":168,"brotliLength":0,"metaUid":"eac6e50e-122"},"eac6e50e-125":{"renderedLength":174,"gzipLength":166,"brotliLength":0,"metaUid":"eac6e50e-124"},"eac6e50e-127":{"renderedLength":187,"gzipLength":173,"brotliLength":0,"metaUid":"eac6e50e-126"},"eac6e50e-129":{"renderedLength":191,"gzipLength":173,"brotliLength":0,"metaUid":"eac6e50e-128"},"eac6e50e-131":{"renderedLength":3925,"gzipLength":1330,"brotliLength":0,"metaUid":"eac6e50e-130"},"eac6e50e-133":{"renderedLength":1591,"gzipLength":563,"brotliLength":0,"metaUid":"eac6e50e-132"},"eac6e50e-135":{"renderedLength":395,"gzipLength":250,"brotliLength":0,"metaUid":"eac6e50e-134"},"eac6e50e-137":{"renderedLength":408,"gzipLength":253,"brotliLength":0,"metaUid":"eac6e50e-136"},"eac6e50e-139":{"renderedLength":641,"gzipLength":353,"brotliLength":0,"metaUid":"eac6e50e-138"},"eac6e50e-141":{"renderedLength":643,"gzipLength":360,"brotliLength":0,"metaUid":"eac6e50e-140"},"eac6e50e-143":{"renderedLength":2096,"gzipLength":839,"brotliLength":0,"metaUid":"eac6e50e-142"},"eac6e50e-145":{"renderedLength":415,"gzipLength":238,"brotliLength":0,"metaUid":"eac6e50e-144"},"eac6e50e-147":{"renderedLength":4799,"gzipLength":1462,"brotliLength":0,"metaUid":"eac6e50e-146"},"eac6e50e-149":{"renderedLength":4314,"gzipLength":1323,"brotliLength":0,"metaUid":"eac6e50e-148"},"eac6e50e-151":{"renderedLength":587,"gzipLength":357,"brotliLength":0,"metaUid":"eac6e50e-150"},"eac6e50e-153":{"renderedLength":5016,"gzipLength":1147,"brotliLength":0,"metaUid":"eac6e50e-152"},"eac6e50e-155":{"renderedLength":0,"gzipLength":0,"brotliLength":0,"metaUid":"eac6e50e-154"},"eac6e50e-157":{"renderedLength":59,"gzipLength":72,"brotliLength":0,"metaUid":"eac6e50e-156"}},"nodeMetas":{"eac6e50e-0":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/config.js","moduleParts":{"index.mjs":"eac6e50e-1"},"imported":[],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-4"},{"uid":"eac6e50e-14"},{"uid":"eac6e50e-20"},{"uid":"eac6e50e-28"},{"uid":"eac6e50e-76"},{"uid":"eac6e50e-10"},{"uid":"eac6e50e-40"},{"uid":"eac6e50e-78"},{"uid":"eac6e50e-80"},{"uid":"eac6e50e-46"},{"uid":"eac6e50e-50"},{"uid":"eac6e50e-86"},{"uid":"eac6e50e-90"},{"uid":"eac6e50e-72"},{"uid":"eac6e50e-18"},{"uid":"eac6e50e-42"},{"uid":"eac6e50e-44"},{"uid":"eac6e50e-130"},{"uid":"eac6e50e-142"},{"uid":"eac6e50e-148"},{"uid":"eac6e50e-146"},{"uid":"eac6e50e-34"},{"uid":"eac6e50e-48"},{"uid":"eac6e50e-30"},{"uid":"eac6e50e-8"},{"uid":"eac6e50e-24"},{"uid":"eac6e50e-84"},{"uid":"eac6e50e-58"},{"uid":"eac6e50e-56"},{"uid":"eac6e50e-104"},{"uid":"eac6e50e-52"},{"uid":"eac6e50e-54"}]},"eac6e50e-2":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/misc.js","moduleParts":{"index.mjs":"eac6e50e-3"},"imported":[],"importedBy":[{"uid":"eac6e50e-4"},{"uid":"eac6e50e-74"},{"uid":"eac6e50e-10"},{"uid":"eac6e50e-82"},{"uid":"eac6e50e-46"},{"uid":"eac6e50e-68"},{"uid":"eac6e50e-50"},{"uid":"eac6e50e-86"},{"uid":"eac6e50e-72"},{"uid":"eac6e50e-42"},{"uid":"eac6e50e-44"},{"uid":"eac6e50e-132"},{"uid":"eac6e50e-142"},{"uid":"eac6e50e-146"},{"uid":"eac6e50e-34"},{"uid":"eac6e50e-36"},{"uid":"eac6e50e-84"},{"uid":"eac6e50e-56"}]},"eac6e50e-4":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/enums.js","moduleParts":{"index.mjs":"eac6e50e-5"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-2"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-74"},{"uid":"eac6e50e-50"},{"uid":"eac6e50e-72"},{"uid":"eac6e50e-42"},{"uid":"eac6e50e-44"},{"uid":"eac6e50e-146"},{"uid":"eac6e50e-34"},{"uid":"eac6e50e-64"},{"uid":"eac6e50e-56"},{"uid":"eac6e50e-104"}]},"eac6e50e-6":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/constants.js","moduleParts":{"index.mjs":"eac6e50e-7"},"imported":[],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-14"},{"uid":"eac6e50e-20"},{"uid":"eac6e50e-28"},{"uid":"eac6e50e-12"},{"uid":"eac6e50e-76"},{"uid":"eac6e50e-40"},{"uid":"eac6e50e-78"},{"uid":"eac6e50e-82"},{"uid":"eac6e50e-46"},{"uid":"eac6e50e-68"},{"uid":"eac6e50e-50"},{"uid":"eac6e50e-86"},{"uid":"eac6e50e-88"},{"uid":"eac6e50e-90"},{"uid":"eac6e50e-92"},{"uid":"eac6e50e-98"},{"uid":"eac6e50e-70"},{"uid":"eac6e50e-100"},{"uid":"eac6e50e-102"},{"uid":"eac6e50e-72"},{"uid":"eac6e50e-122"},{"uid":"eac6e50e-124"},{"uid":"eac6e50e-126"},{"uid":"eac6e50e-128"},{"uid":"eac6e50e-18"},{"uid":"eac6e50e-42"},{"uid":"eac6e50e-44"},{"uid":"eac6e50e-130"},{"uid":"eac6e50e-138"},{"uid":"eac6e50e-140"},{"uid":"eac6e50e-142"},{"uid":"eac6e50e-148"},{"uid":"eac6e50e-146"},{"uid":"eac6e50e-150"},{"uid":"eac6e50e-62"},{"uid":"eac6e50e-34"},{"uid":"eac6e50e-48"},{"uid":"eac6e50e-30"},{"uid":"eac6e50e-24"},{"uid":"eac6e50e-16"},{"uid":"eac6e50e-84"},{"uid":"eac6e50e-58"},{"uid":"eac6e50e-56"},{"uid":"eac6e50e-104"},{"uid":"eac6e50e-54"}]},"eac6e50e-8":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/error-manager.js","moduleParts":{"index.mjs":"eac6e50e-9"},"imported":[{"uid":"eac6e50e-0"}],"importedBy":[{"uid":"eac6e50e-20"},{"uid":"eac6e50e-10"},{"uid":"eac6e50e-50"},{"uid":"eac6e50e-86"},{"uid":"eac6e50e-90"},{"uid":"eac6e50e-72"},{"uid":"eac6e50e-18"},{"uid":"eac6e50e-48"},{"uid":"eac6e50e-30"}]},"eac6e50e-10":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/users.js","moduleParts":{"index.mjs":"eac6e50e-11"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-8"},{"uid":"eac6e50e-2"},{"uid":"eac6e50e-12"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-12"},{"uid":"eac6e50e-50"},{"uid":"eac6e50e-90"},{"uid":"eac6e50e-72"},{"uid":"eac6e50e-18"},{"uid":"eac6e50e-132"}]},"eac6e50e-12":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/remotecall.js","moduleParts":{"index.mjs":"eac6e50e-13"},"imported":[{"uid":"eac6e50e-6"},{"uid":"eac6e50e-10"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-14"},{"uid":"eac6e50e-20"},{"uid":"eac6e50e-10"},{"uid":"eac6e50e-130"}]},"eac6e50e-14":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/chat/chat-manager.js","moduleParts":{"index.mjs":"eac6e50e-15"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-12"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-148"},{"uid":"eac6e50e-146"}]},"eac6e50e-16":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/icons.js","moduleParts":{"index.mjs":"eac6e50e-17"},"imported":[{"uid":"eac6e50e-6"}],"importedBy":[{"uid":"eac6e50e-74"},{"uid":"eac6e50e-18"},{"uid":"eac6e50e-30"},{"uid":"eac6e50e-52"},{"uid":"eac6e50e-54"}]},"eac6e50e-18":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/common/checkbars.js","moduleParts":{"index.mjs":"eac6e50e-19"},"imported":[{"uid":"eac6e50e-8"},{"uid":"eac6e50e-0"},{"uid":"eac6e50e-10"},{"uid":"eac6e50e-16"},{"uid":"eac6e50e-6"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-20"},{"uid":"eac6e50e-40"},{"uid":"eac6e50e-68"},{"uid":"eac6e50e-50"},{"uid":"eac6e50e-86"},{"uid":"eac6e50e-72"},{"uid":"eac6e50e-130"},{"uid":"eac6e50e-48"}]},"eac6e50e-20":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/app/gm-anarchy.js","moduleParts":{"index.mjs":"eac6e50e-21"},"imported":[{"uid":"eac6e50e-18"},{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-8"},{"uid":"eac6e50e-12"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-22":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/app/handle-drag.js","moduleParts":{"index.mjs":"eac6e50e-23"},"imported":[],"importedBy":[{"uid":"eac6e50e-28"}]},"eac6e50e-24":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/app/gm-difficulty.js","moduleParts":{"index.mjs":"eac6e50e-25"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"}],"importedBy":[{"uid":"eac6e50e-28"}]},"eac6e50e-26":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/styles/gm-manager.scss","moduleParts":{"index.mjs":"eac6e50e-27"},"imported":[],"importedBy":[{"uid":"eac6e50e-28"}]},"eac6e50e-28":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/app/gm-manager.js","moduleParts":{"index.mjs":"eac6e50e-29"},"imported":[{"uid":"eac6e50e-22"},{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-24"},{"uid":"eac6e50e-26"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-30":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/attribute-actions.js","moduleParts":{"index.mjs":"eac6e50e-31"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-8"},{"uid":"eac6e50e-16"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-82"},{"uid":"eac6e50e-50"},{"uid":"eac6e50e-72"},{"uid":"eac6e50e-120"},{"uid":"eac6e50e-34"}]},"eac6e50e-32":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/matrix-helper.js","moduleParts":{"index.mjs":"eac6e50e-33"},"imported":[],"importedBy":[{"uid":"eac6e50e-68"},{"uid":"eac6e50e-50"},{"uid":"eac6e50e-86"},{"uid":"eac6e50e-102"},{"uid":"eac6e50e-42"}]},"eac6e50e-34":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/modifiers/modifiers.js","moduleParts":{"index.mjs":"eac6e50e-35"},"imported":[{"uid":"eac6e50e-30"},{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-4"},{"uid":"eac6e50e-2"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-50"},{"uid":"eac6e50e-86"},{"uid":"eac6e50e-42"},{"uid":"eac6e50e-48"},{"uid":"eac6e50e-84"}]},"eac6e50e-36":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/roll/dice-cursor.js","moduleParts":{"index.mjs":"eac6e50e-37"},"imported":[{"uid":"eac6e50e-2"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-44"}]},"eac6e50e-38":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/character-actor-essence.js","moduleParts":{"index.mjs":"eac6e50e-39"},"imported":[],"importedBy":[{"uid":"eac6e50e-40"}]},"eac6e50e-40":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/hooks-manager.js","moduleParts":{"index.mjs":"eac6e50e-41"},"imported":[{"uid":"eac6e50e-38"},{"uid":"eac6e50e-18"},{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-76"},{"uid":"eac6e50e-82"},{"uid":"eac6e50e-46"},{"uid":"eac6e50e-86"},{"uid":"eac6e50e-72"},{"uid":"eac6e50e-42"},{"uid":"eac6e50e-48"}]},"eac6e50e-42":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/roll/roll-parameters.js","moduleParts":{"index.mjs":"eac6e50e-43"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-4"},{"uid":"eac6e50e-40"},{"uid":"eac6e50e-32"},{"uid":"eac6e50e-2"},{"uid":"eac6e50e-34"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-72"},{"uid":"eac6e50e-44"},{"uid":"eac6e50e-146"}]},"eac6e50e-44":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/roll/roll-dialog.js","moduleParts":{"index.mjs":"eac6e50e-45"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-4"},{"uid":"eac6e50e-2"},{"uid":"eac6e50e-36"},{"uid":"eac6e50e-42"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-68"},{"uid":"eac6e50e-50"}]},"eac6e50e-46":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/skills.js","moduleParts":{"index.mjs":"eac6e50e-47"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-40"},{"uid":"eac6e50e-2"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-82"},{"uid":"eac6e50e-50"}]},"eac6e50e-48":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/actor-damage.js","moduleParts":{"index.mjs":"eac6e50e-49"},"imported":[{"uid":"eac6e50e-18"},{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-8"},{"uid":"eac6e50e-40"},{"uid":"eac6e50e-34"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-50"},{"uid":"eac6e50e-148"}]},"eac6e50e-50":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/base-actor.js","moduleParts":{"index.mjs":"eac6e50e-51"},"imported":[{"uid":"eac6e50e-30"},{"uid":"eac6e50e-18"},{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-4"},{"uid":"eac6e50e-8"},{"uid":"eac6e50e-32"},{"uid":"eac6e50e-2"},{"uid":"eac6e50e-34"},{"uid":"eac6e50e-44"},{"uid":"eac6e50e-46"},{"uid":"eac6e50e-10"},{"uid":"eac6e50e-48"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-74"},{"uid":"eac6e50e-86"},{"uid":"eac6e50e-88"},{"uid":"eac6e50e-90"},{"uid":"eac6e50e-138"},{"uid":"eac6e50e-140"}]},"eac6e50e-52":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/confirmation.js","moduleParts":{"index.mjs":"eac6e50e-53"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-16"}],"importedBy":[{"uid":"eac6e50e-56"}]},"eac6e50e-54":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/dialog/select-actor.js","moduleParts":{"index.mjs":"eac6e50e-55"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-16"}],"importedBy":[{"uid":"eac6e50e-56"}]},"eac6e50e-56":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/anarchy-actor-sheet.js","moduleParts":{"index.mjs":"eac6e50e-57"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-52"},{"uid":"eac6e50e-2"},{"uid":"eac6e50e-4"},{"uid":"eac6e50e-54"}],"importedBy":[{"uid":"eac6e50e-94"},{"uid":"eac6e50e-96"},{"uid":"eac6e50e-134"},{"uid":"eac6e50e-136"},{"uid":"eac6e50e-58"}]},"eac6e50e-58":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/character-base-sheet.js","moduleParts":{"index.mjs":"eac6e50e-59"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-56"},{"uid":"eac6e50e-6"}],"importedBy":[{"uid":"eac6e50e-92"},{"uid":"eac6e50e-98"},{"uid":"eac6e50e-150"},{"uid":"eac6e50e-62"}]},"eac6e50e-60":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/styles/character-enhanced-sheet.scss","moduleParts":{"index.mjs":"eac6e50e-61"},"imported":[],"importedBy":[{"uid":"eac6e50e-62"}]},"eac6e50e-62":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/character-enhanced-sheet.js","moduleParts":{"index.mjs":"eac6e50e-63"},"imported":[{"uid":"eac6e50e-6"},{"uid":"eac6e50e-58"},{"uid":"eac6e50e-60"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-74"}]},"eac6e50e-64":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/damage.js","moduleParts":{"index.mjs":"eac6e50e-65"},"imported":[{"uid":"eac6e50e-4"}],"importedBy":[{"uid":"eac6e50e-74"}]},"eac6e50e-66":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/grammar.js","moduleParts":{"index.mjs":"eac6e50e-67"},"imported":[],"importedBy":[{"uid":"eac6e50e-74"}]},"eac6e50e-68":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/anarchy-base-item.js","moduleParts":{"index.mjs":"eac6e50e-69"},"imported":[{"uid":"eac6e50e-18"},{"uid":"eac6e50e-2"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-44"},{"uid":"eac6e50e-32"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-70"},{"uid":"eac6e50e-100"},{"uid":"eac6e50e-102"},{"uid":"eac6e50e-72"},{"uid":"eac6e50e-122"},{"uid":"eac6e50e-124"},{"uid":"eac6e50e-126"},{"uid":"eac6e50e-128"}]},"eac6e50e-70":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/skill-item.js","moduleParts":{"index.mjs":"eac6e50e-71"},"imported":[{"uid":"eac6e50e-6"},{"uid":"eac6e50e-68"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-72"},{"uid":"eac6e50e-118"}]},"eac6e50e-72":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/weapon-item.js","moduleParts":{"index.mjs":"eac6e50e-73"},"imported":[{"uid":"eac6e50e-6"},{"uid":"eac6e50e-0"},{"uid":"eac6e50e-4"},{"uid":"eac6e50e-68"},{"uid":"eac6e50e-18"},{"uid":"eac6e50e-10"},{"uid":"eac6e50e-42"},{"uid":"eac6e50e-40"},{"uid":"eac6e50e-30"},{"uid":"eac6e50e-8"},{"uid":"eac6e50e-2"},{"uid":"eac6e50e-70"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-74"}]},"eac6e50e-74":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/handlebars-manager.js","moduleParts":{"index.mjs":"eac6e50e-75"},"imported":[{"uid":"eac6e50e-50"},{"uid":"eac6e50e-62"},{"uid":"eac6e50e-64"},{"uid":"eac6e50e-4"},{"uid":"eac6e50e-66"},{"uid":"eac6e50e-16"},{"uid":"eac6e50e-72"},{"uid":"eac6e50e-2"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-76":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/styles.js","moduleParts":{"index.mjs":"eac6e50e-77"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-40"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-78":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/roll/dice.js","moduleParts":{"index.mjs":"eac6e50e-79"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-80"}]},"eac6e50e-80":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/roll/anarchy-roll.js","moduleParts":{"index.mjs":"eac6e50e-81"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-78"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-146"}]},"eac6e50e-82":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/migrations.js","moduleParts":{"index.mjs":"eac6e50e-83"},"imported":[{"uid":"eac6e50e-6"},{"uid":"eac6e50e-46"},{"uid":"eac6e50e-40"},{"uid":"eac6e50e-2"},{"uid":"eac6e50e-30"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-84":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/dialog/roll-celebrity.js","moduleParts":{"index.mjs":"eac6e50e-85"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-2"},{"uid":"eac6e50e-34"}],"importedBy":[{"uid":"eac6e50e-86"}]},"eac6e50e-86":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/character-actor.js","moduleParts":{"index.mjs":"eac6e50e-87"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-50"},{"uid":"eac6e50e-8"},{"uid":"eac6e50e-2"},{"uid":"eac6e50e-34"},{"uid":"eac6e50e-18"},{"uid":"eac6e50e-84"},{"uid":"eac6e50e-40"},{"uid":"eac6e50e-32"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-88":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/device-actor.js","moduleParts":{"index.mjs":"eac6e50e-89"},"imported":[{"uid":"eac6e50e-6"},{"uid":"eac6e50e-50"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-90":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/vehicle-actor.js","moduleParts":{"index.mjs":"eac6e50e-91"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-8"},{"uid":"eac6e50e-10"},{"uid":"eac6e50e-50"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-92":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/character-sheet.js","moduleParts":{"index.mjs":"eac6e50e-93"},"imported":[{"uid":"eac6e50e-6"},{"uid":"eac6e50e-58"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-94":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/device-sheet.js","moduleParts":{"index.mjs":"eac6e50e-95"},"imported":[{"uid":"eac6e50e-56"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-96":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/vehicle-sheet.js","moduleParts":{"index.mjs":"eac6e50e-97"},"imported":[{"uid":"eac6e50e-56"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-98":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/character-npc-sheet.js","moduleParts":{"index.mjs":"eac6e50e-99"},"imported":[{"uid":"eac6e50e-6"},{"uid":"eac6e50e-58"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-100":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/metatype-item.js","moduleParts":{"index.mjs":"eac6e50e-101"},"imported":[{"uid":"eac6e50e-6"},{"uid":"eac6e50e-68"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-102":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/cyberdeck-item.js","moduleParts":{"index.mjs":"eac6e50e-103"},"imported":[{"uid":"eac6e50e-6"},{"uid":"eac6e50e-32"},{"uid":"eac6e50e-68"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-104":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/base-item-sheet.js","moduleParts":{"index.mjs":"eac6e50e-105"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-4"}],"importedBy":[{"uid":"eac6e50e-106"},{"uid":"eac6e50e-108"},{"uid":"eac6e50e-110"},{"uid":"eac6e50e-112"},{"uid":"eac6e50e-114"},{"uid":"eac6e50e-116"},{"uid":"eac6e50e-118"},{"uid":"eac6e50e-120"}]},"eac6e50e-106":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/contact-item-sheet.js","moduleParts":{"index.mjs":"eac6e50e-107"},"imported":[{"uid":"eac6e50e-104"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-108":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/cyberdeck-item-sheet.js","moduleParts":{"index.mjs":"eac6e50e-109"},"imported":[{"uid":"eac6e50e-104"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-110":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/gear-item-sheet.js","moduleParts":{"index.mjs":"eac6e50e-111"},"imported":[{"uid":"eac6e50e-104"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-112":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/metatype-item-sheet.js","moduleParts":{"index.mjs":"eac6e50e-113"},"imported":[{"uid":"eac6e50e-104"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-114":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/quality-item-sheet.js","moduleParts":{"index.mjs":"eac6e50e-115"},"imported":[{"uid":"eac6e50e-104"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-116":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/shadowamp-item-sheet.js","moduleParts":{"index.mjs":"eac6e50e-117"},"imported":[{"uid":"eac6e50e-104"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-118":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/skill-item-sheet.js","moduleParts":{"index.mjs":"eac6e50e-119"},"imported":[{"uid":"eac6e50e-104"},{"uid":"eac6e50e-70"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-120":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/weapon-item-sheet.js","moduleParts":{"index.mjs":"eac6e50e-121"},"imported":[{"uid":"eac6e50e-30"},{"uid":"eac6e50e-104"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-122":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/contact-item.js","moduleParts":{"index.mjs":"eac6e50e-123"},"imported":[{"uid":"eac6e50e-6"},{"uid":"eac6e50e-68"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-124":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/gear-item.js","moduleParts":{"index.mjs":"eac6e50e-125"},"imported":[{"uid":"eac6e50e-6"},{"uid":"eac6e50e-68"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-126":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/quality-item.js","moduleParts":{"index.mjs":"eac6e50e-127"},"imported":[{"uid":"eac6e50e-6"},{"uid":"eac6e50e-68"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-128":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/item/shadowamp-item.js","moduleParts":{"index.mjs":"eac6e50e-129"},"imported":[{"uid":"eac6e50e-6"},{"uid":"eac6e50e-68"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-130":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/app/gm-convergence.js","moduleParts":{"index.mjs":"eac6e50e-131"},"imported":[{"uid":"eac6e50e-18"},{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-12"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-132":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/anarchy-combat.js","moduleParts":{"index.mjs":"eac6e50e-133"},"imported":[{"uid":"eac6e50e-2"},{"uid":"eac6e50e-10"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-134":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/ic-sheet.js","moduleParts":{"index.mjs":"eac6e50e-135"},"imported":[{"uid":"eac6e50e-56"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-136":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/sprite-sheet.js","moduleParts":{"index.mjs":"eac6e50e-137"},"imported":[{"uid":"eac6e50e-56"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-138":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/sprite-actor.js","moduleParts":{"index.mjs":"eac6e50e-139"},"imported":[{"uid":"eac6e50e-6"},{"uid":"eac6e50e-50"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-140":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/ic-actor.js","moduleParts":{"index.mjs":"eac6e50e-141"},"imported":[{"uid":"eac6e50e-6"},{"uid":"eac6e50e-50"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-142":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/token/hud-shortcuts.js","moduleParts":{"index.mjs":"eac6e50e-143"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-2"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-144":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/token/tokens.js","moduleParts":{"index.mjs":"eac6e50e-145"},"imported":[],"importedBy":[{"uid":"eac6e50e-146"}]},"eac6e50e-146":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/roll/roll-manager.js","moduleParts":{"index.mjs":"eac6e50e-147"},"imported":[{"uid":"eac6e50e-14"},{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-4"},{"uid":"eac6e50e-2"},{"uid":"eac6e50e-144"},{"uid":"eac6e50e-80"},{"uid":"eac6e50e-42"}],"importedBy":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-148"}]},"eac6e50e-148":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/combat/combat-manager.js","moduleParts":{"index.mjs":"eac6e50e-149"},"imported":[{"uid":"eac6e50e-48"},{"uid":"eac6e50e-14"},{"uid":"eac6e50e-0"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-146"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-150":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/actor/character-tabbed-sheet.js","moduleParts":{"index.mjs":"eac6e50e-151"},"imported":[{"uid":"eac6e50e-6"},{"uid":"eac6e50e-58"}],"importedBy":[{"uid":"eac6e50e-152"}]},"eac6e50e-152":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/modules/anarchy-system.js","moduleParts":{"index.mjs":"eac6e50e-153"},"imported":[{"uid":"eac6e50e-0"},{"uid":"eac6e50e-4"},{"uid":"eac6e50e-6"},{"uid":"eac6e50e-14"},{"uid":"eac6e50e-20"},{"uid":"eac6e50e-28"},{"uid":"eac6e50e-74"},{"uid":"eac6e50e-12"},{"uid":"eac6e50e-76"},{"uid":"eac6e50e-10"},{"uid":"eac6e50e-40"},{"uid":"eac6e50e-78"},{"uid":"eac6e50e-80"},{"uid":"eac6e50e-82"},{"uid":"eac6e50e-46"},{"uid":"eac6e50e-68"},{"uid":"eac6e50e-50"},{"uid":"eac6e50e-86"},{"uid":"eac6e50e-88"},{"uid":"eac6e50e-90"},{"uid":"eac6e50e-92"},{"uid":"eac6e50e-94"},{"uid":"eac6e50e-96"},{"uid":"eac6e50e-98"},{"uid":"eac6e50e-70"},{"uid":"eac6e50e-100"},{"uid":"eac6e50e-102"},{"uid":"eac6e50e-72"},{"uid":"eac6e50e-106"},{"uid":"eac6e50e-108"},{"uid":"eac6e50e-110"},{"uid":"eac6e50e-112"},{"uid":"eac6e50e-114"},{"uid":"eac6e50e-116"},{"uid":"eac6e50e-118"},{"uid":"eac6e50e-120"},{"uid":"eac6e50e-122"},{"uid":"eac6e50e-124"},{"uid":"eac6e50e-126"},{"uid":"eac6e50e-128"},{"uid":"eac6e50e-18"},{"uid":"eac6e50e-42"},{"uid":"eac6e50e-44"},{"uid":"eac6e50e-130"},{"uid":"eac6e50e-132"},{"uid":"eac6e50e-134"},{"uid":"eac6e50e-136"},{"uid":"eac6e50e-138"},{"uid":"eac6e50e-140"},{"uid":"eac6e50e-142"},{"uid":"eac6e50e-148"},{"uid":"eac6e50e-146"},{"uid":"eac6e50e-150"},{"uid":"eac6e50e-62"},{"uid":"eac6e50e-34"},{"uid":"eac6e50e-48"},{"uid":"eac6e50e-30"},{"uid":"eac6e50e-36"}],"importedBy":[{"uid":"eac6e50e-156"}]},"eac6e50e-154":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/styles/global.scss","moduleParts":{"index.mjs":"eac6e50e-155"},"imported":[],"importedBy":[{"uid":"eac6e50e-156"}]},"eac6e50e-156":{"id":"D:/Users/vincent/FoundryVTT/FoundryData-14/Data/anarchy-github/src/start.js","moduleParts":{"index.mjs":"eac6e50e-157"},"imported":[{"uid":"eac6e50e-152"},{"uid":"eac6e50e-154"}],"importedBy":[],"isEntry":true}},"env":{"rollup":"4.23.0"},"options":{"gzip":true,"brotli":false,"sourcemap":false}};
 
     const run = () => {
       const width = window.innerWidth;
